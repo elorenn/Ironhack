@@ -1,0 +1,269 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS Reset*/
+
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+h1{
+	font-size: 64px;
+}
+
+h2{
+	font-size: 53px;
+	color:#33997c;
+
+}
+
+p { 
+	font-size: 18px;
+ }
+
+h3{
+
+}
+
+nav {
+	height: 70px;
+	background-color: #000;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.myavatar{
+		width: 60px;
+		border-radius: 100%;
+		float: left;
+}
+
+nav ul {
+	float: right;
+}
+nav ul li {
+	display: inline;
+	line-height: 70px;
+	margin: 10px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul li a:hover{
+	color: #3fbe9e;
+}
+
+.landing {
+	background-image:url(../images/landing.png);
+	height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+
+}
+
+.landing h1{
+	text-align: center;
+	color: #fff;
+	line-height: 600px;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.intro-avatar{
+	width: 150px;
+	border-radius: 100%;
+	display: block;
+	margin:30px auto;
+}
+
+.intro h2{
+	text-align: center;
+	
+	font-family: 'Lato', sans-serif;
+}
+
+.intro p{
+	text-align: center;
+	margin: 20px;
+
+}
+
+.intro-about{
+	padding-left: 4%;
+	height: 200px;
+
+}
+
+.box{
+	float: left;
+	width: 29%;
+	margin: 1%;
+	background-color: #5a1a51;
+	color: #fff;
+}
+
+
+
+.work-experience h2{
+	margin-left:50px;
+
+}
+
+.work-experience h2{
+	text-align: center;
+
+}
+
+.work{
+	margin: 50px;
+	height: 200px;
+}
+
+.work-logo{
+	width:30%;
+	float: left;
+	height: 200px;
+
+}
+
+.work-desc{
+	width: 60%;
+	float:left;
+	height: 200px;
+}
+
+.work-logo img{
+	display: block;
+	width: 100px;
+	margin: 0px auto;
+
+}
+
+.skills {
+	text-align: center;
+	padding: 20px 200px 100px 200px;
+}
+
+
+.skills-about{
+	padding: 10px;
+}
+
+.outer-bar{
+	height: 40px;
+	width: 100%;
+	border: 1px solid #efefef;
+}
+
+.inner-bar{
+	height: 40px;
+	color: #fff;
+	
+}
+
+.inner-bar p{
+	line-height: 40px;
+	text-transform: uppercase;
+}
+
+
+.html {
+	background-color: #3fbe9e;
+	width: 40%;
+}
+
+.photoshop {
+	background-color: #9d348a;
+	width: 60%;
+}
+
+
+.css {
+	background-color: #cc6784;
+	width: 30%;
+
+}
+
+footer{
+	height: 60px;
+	background-color: #000;
+	color:#fff;
+	text-align: center;
+}
+
+footer p{
+	line-height: 60px;
+}
+
+footer span {
+	color: red;
+}
+
+footer a{
+	text-decoration: none;
+	color: #fff;	
+}
+
+footer a:hover{
+	color:#3fbe9e;
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
