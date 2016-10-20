@@ -16,3 +16,18 @@ the_blog.add_post Post.new("Eighth Post", Time.now, "Lorem ipsum dolor sit amet,
 the_blog.add_post Post.new("Ninth Post", Time.now, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 
 the_blog.publish_front_page
+
+input = nil 
+
+while input != "exit"
+	puts "\nType [next] to see the next page or [prev] to see the previous page."
+  input = gets.chomp
+
+  if input == "next"
+    the_blog.go_next
+  elsif input == "prev"
+    the_blog.go_prev
+  end
+
+  the_blog.publish_front_page
+end

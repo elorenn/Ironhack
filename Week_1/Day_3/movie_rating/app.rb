@@ -35,11 +35,13 @@ end
 	# end
 end
 
+
+print "--" * (movies.length)
+puts " "
+
 1.upto(movies.length) do |whatever|
 	print "|#{whatever}"
 end
-
-
 
 
 puts ""
