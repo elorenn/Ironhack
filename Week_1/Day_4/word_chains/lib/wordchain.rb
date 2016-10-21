@@ -6,7 +6,7 @@ class WordChain
 
     def find_chain(word1, word2)
        
-puts word1
+puts "#{word1} --> #{word2}" 
 
 attempt = 0
 
@@ -18,20 +18,20 @@ attempt = 0
 	     while letter < word1.length + 1 
 	       
 	       	
-	       	first_word = word1.clone
+	       	word_clone = word1.clone
 	       
 	      
 
-	       	if first_word[letter] == word2[letter]
+	       	if word_clone[letter] == word2[letter]
 	       		
 	       		#do nothing
 	       		else
 	     		
-	     			first_word[letter] = word2[letter]
+	     			word_clone[letter] = word2[letter]
 	     			
-	     				if @dictionary.exists?(first_word) 
-	     				word1 = first_word
-	     				puts word1
+	     				if @dictionary.exists?(word_clone) 
+	     					word1 = word_clone
+	     					puts word1
 	     				end
 	       	end
 
@@ -39,6 +39,7 @@ attempt = 0
 	       end
 
 	       	attempt += 1
+
 	   end
 
 					   if word1 != word2

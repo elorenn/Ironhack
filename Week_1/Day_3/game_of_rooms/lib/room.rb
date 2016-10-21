@@ -2,7 +2,7 @@ require_relative("game.rb")
 
 
 class Room
-	attr_accessor(:description,:entry,:exit, :enemy)
+	attr_accessor(:description,:entry,:exit,:enemy)
 
 	def initialize(description, entry, exit, enemy)
 		@description = description
