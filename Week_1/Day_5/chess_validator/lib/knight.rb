@@ -1,11 +1,7 @@
-class Knight
-	attr_accessor(:starting_x, :starting_y, :color) 
+require_relative("chesspiece.rb") 
 
-	def initialize(starting_x, starting_y, color)
-		@starting_x = starting_x
-		@starting_y = starting_y
-	end
-
+class Knight < ChessPiece
+	
 	def can_move?(ending_x, ending_y)
 		if 
 			((ending_x == @starting_x + 1 ) || (ending_x == @starting_x - 1 )) && ((ending_y == @starting_y + 2 ) || (ending_y == @starting_y - 2 ))

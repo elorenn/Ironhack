@@ -1,9 +1,9 @@
-require_relative("lib/rook.rb")
-require_relative("lib/king.rb")
-require_relative("lib/knight.rb")
-require_relative("lib/bishop.rb")
-require_relative("lib/queen.rb")
-require_relative("lib/pawn.rb")
+require_relative("rook.rb")
+require_relative("king.rb")
+require_relative("knight.rb")
+require_relative("bishop.rb")
+require_relative("queen.rb")
+require_relative("pawn.rb")
 
 class Board 
 

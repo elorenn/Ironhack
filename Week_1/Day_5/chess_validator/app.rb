@@ -1,3 +1,5 @@
+require_relative("lib/chesspiece.rb") 
+
 require_relative("lib/rook.rb")
 require_relative("lib/king.rb")
 require_relative("lib/knight.rb")
@@ -123,6 +125,7 @@ my_board.board_can_move?(6, 1, 3, 5)
 my_board.board_can_move?(4, 1, 2, 2)
 my_board.board_can_move?(2, 2, 1, 3)
 
+puts ""
 
 # # **********************************************************
 

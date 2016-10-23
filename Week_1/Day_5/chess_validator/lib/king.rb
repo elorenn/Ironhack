@@ -1,10 +1,6 @@
-class King
-	attr_accessor(:starting_x, :starting_y, :color) 
+require_relative("chesspiece.rb") 
 
-	def initialize(starting_x, starting_y, color)
-		@starting_x = starting_x
-		@starting_y = starting_y
-	end
+class King < ChessPiece 
 
 	def can_move?(ending_x, ending_y)
 		if 

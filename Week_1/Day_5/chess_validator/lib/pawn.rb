@@ -1,11 +1,6 @@
-class Pawn
-	attr_accessor(:starting_x, :starting_y, :color) 
+require_relative("chesspiece.rb") 
 
-	def initialize(starting_x, starting_y, color)
-		@starting_x = starting_x
-		@starting_y = starting_y
-		@color = color
-	end
+class Pawn < ChessPiece
 
 	def can_move?(ending_x, ending_y)
 		
