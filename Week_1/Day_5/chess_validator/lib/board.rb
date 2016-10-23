@@ -10,17 +10,17 @@ require_relative("chesspiece.rb")
 class Board 
 
 	def initialize
-		@chess = [nil,[],[],[],[],[],[],[],[]]
+		@board = [nil,[],[],[],[],[],[],[],[]]
 	end
 
 	def add_chess_piece(chess_piece)
-		@chess[chess_piece.starting_x][chess_piece.starting_y] = chess_piece
+		@board[chess_piece.starting_x][chess_piece.starting_y] = chess_piece
 	end 
 
 	def board_can_move?(starting_x, starting_y, ending_x, ending_y)
 		
 # check if there's a piece:
-		if @chess[starting_x][starting_y] == nil 
+		if @board[starting_x][starting_y] == nil 
 
 			puts "There is no chess piece at #{starting_x}, #{starting_y}."
 
@@ -28,15 +28,16 @@ class Board
 			
 			puts "The piece is not changing positions. Please enter a new destination."
 
-		elsif ending_x >= 9 || ending_y >= 9
+		elsif ending_x > 8 || ending_y > 8 || ending_x < 1 || ending_y < 1 
 				
-			puts "You're trying to move the piece off the board. Please enter a new destination."	
+			puts "Position #{ending_x}, #{ending_y} is off the board. Please enter a new destination."	
 
-		elsif (ending_x < 9 || ending_y < 9) && (@chess[starting_x][starting_y].can_move?(ending_x, ending_y)) 
+		elsif #chess_piece.can_move?(ending_x, ending_y)
+			 @board[starting_x][starting_y].can_move?(ending_x, ending_y)
 					
 			puts "The piece can move from #{starting_x}, #{starting_y} to #{ending_x}, #{ending_y}."
 
-		elsif   
+		else   
 
 			puts "The piece cannot move there." 
 

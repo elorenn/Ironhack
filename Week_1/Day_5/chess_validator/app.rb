@@ -153,6 +153,8 @@ puts "Trying to Move Off Board:"
 puts "-------------------------"
 
 my_board.board_can_move?(8, 1, 9, 2)
+my_board.board_can_move?(8, 1, 0, 2)
+
 
 puts ""
 
