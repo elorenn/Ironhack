@@ -45,6 +45,18 @@ white_pawn_7 = Pawn.new(7, 2, "white")
 white_pawn_8 = Pawn.new(8, 2, "white")
 
 
+# # add all pawns at once with some variation of: 
+
+#  8.times do |i|
+# 	board.add_piece(Pawn.new(i+1, 7, "black"))
+#  end
+
+#  8.times do |i|
+# 	board.add_piece(Pawn.new(i+1, 7, "white"))
+#  end
+
+
+
 my_board = Board.new 
 
 my_board.add_chess_piece(black_rook_left)
