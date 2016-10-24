@@ -16,11 +16,16 @@ RSpec.describe Task do
 		it "returns whether or not an instance of a task is done" do
 
 			task = Task.new("Buy the milk")
-			task2 = Task.new("Wash the car")
 
 			expect(task.complete?).to eq(false)
-
 		end	
 
+		it "changes the completed attribute of the task to true" do
+
+			task = Task.new("Buy the milk")
+			task2 = Task.new("Wash the car")
+
+			expect((task.complete!).complete?).to eq(true)
+		end
 	end
 end

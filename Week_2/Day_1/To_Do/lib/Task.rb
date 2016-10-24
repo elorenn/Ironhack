@@ -5,10 +5,14 @@ class Task
         @content = content
         @id = @@current_id
         @@current_id += 1
-        @complete = false 
+        @completed = false 
     end
 
     def complete?
-    	@complete
+    	@completed
+    end
+
+    def complete! 
+    	
     end
 end
