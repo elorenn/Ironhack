@@ -7,6 +7,7 @@ class Task
         @@current_id += 1
         @completed = false 
         @created_at = Time.now 
+        @updated_at = nil 
     end
 
     def complete?
@@ -25,7 +26,11 @@ class Task
     	@created_at
     end
 
-    def update_content!(new_content) 
+    def updated_at
+    	@updated_at
+    end
 
+    def update_content!(new_content) 
+    	@content.gsub!(content, new_content)
     end
 end

@@ -49,5 +49,11 @@ RSpec.describe Task do
 			expect(task.content).to eq("Walk the dog")
 		end
 
+		it "makes updated_at attribute equal to now" do
+			task = Task.new("Walk the milk")
+			task.update_content!("Walk the dog")
+			expect(task.updated_at).to be_within(0.1).of(Time.now) 
+		end
+
 	end
 end
