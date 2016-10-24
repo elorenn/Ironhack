@@ -25,7 +25,15 @@ RSpec.describe Task do
 			task = Task.new("Buy the milk")
 			task.complete!
 			expect(task.complete?).to eq(true)
-			#expect((task.complete!).complete?).to eq(true)
 		end
+
+		it "changes the completed attribute of the task to false" do 
+
+			task = Task.new("Buy the milk")
+			task.complete!
+			task.make_incomplete!
+			expect(task.complete?).to eq(false)
+		end
+
 	end
 end
