@@ -27,10 +27,11 @@ class Task
     end
 
     def updated_at
-    	@updated_at
+    	@updated_at	
     end
 
     def update_content!(new_content) 
     	@content.gsub!(content, new_content)
+    	@updated_at = Time.now
     end
 end
