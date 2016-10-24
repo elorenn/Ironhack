@@ -8,5 +8,8 @@ class Task
         @complete = false 
     end
 
-    
+    # def id
+    # 	@@current_id += 1
+    # end
+
 end
