@@ -17,6 +17,6 @@ class Task
     end
 
     def make_incomplete!
-    	
+    	@completed = false 
     end
 end
