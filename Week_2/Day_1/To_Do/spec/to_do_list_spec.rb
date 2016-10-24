@@ -23,9 +23,9 @@ RSpec.describe Task do
 		it "changes the completed attribute of the task to true" do
 
 			task = Task.new("Buy the milk")
-			task2 = Task.new("Wash the car")
-
-			expect((task.complete!).complete?).to eq(true)
+			task.complete!
+			expect(task.complete?).to eq(true)
+			#expect((task.complete!).complete?).to eq(true)
 		end
 	end
 end
