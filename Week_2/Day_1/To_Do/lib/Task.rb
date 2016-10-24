@@ -13,6 +13,6 @@ class Task
     end
 
     def complete! 
-    	
+    	@completed = true
     end
 end
