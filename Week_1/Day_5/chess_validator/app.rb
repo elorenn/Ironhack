@@ -100,8 +100,9 @@ puts ""
 puts "Valid Movements:"
 puts "---------------------"
 
+
 #black: 
-my_board.board_can_move?(1, 8, 1, 5)
+my_board.board_can_move?(1, 8, 1, 5) == "yes"
 my_board.board_can_move?(5, 8, 5, 7)
 my_board.board_can_move?(2, 8, 3, 6)
 my_board.board_can_move?(3, 8, 1, 6)
@@ -121,8 +122,9 @@ puts ""
 puts "Invalid Movements:"
 puts "-----------------------"
 
+
 #black: 
-my_board.board_can_move?(1, 8, 2, 7)
+my_board.board_can_move?(1, 8, 2, 7) == "no"
 my_board.board_can_move?(5, 8, 5, 4)
 my_board.board_can_move?(2, 8, 2, 7)
 my_board.board_can_move?(3, 8, 2, 6)
@@ -153,11 +155,11 @@ puts "-------------------------"
 my_board.board_can_move?(8, 1, 8, 1)
 
 
-puts ""
-puts "Cannot Move There:"
-puts "-------------------------"
+# puts ""
+# puts "Cannot Move There:"
+# puts "-------------------------"
 
-my_board.board_can_move?(8, 1, 3, 5)
+# my_board.board_can_move?(8, 1, 3, 5)
 
 
 puts ""

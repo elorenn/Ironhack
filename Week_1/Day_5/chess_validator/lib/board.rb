@@ -14,7 +14,16 @@ class Board
 	end
 
 	def add_chess_piece(chess_piece)
-		@board[chess_piece.starting_x][chess_piece.starting_y] = chess_piece
+
+	#	@board[chess_piece.starting_x][chess_piece.starting_y] = chess_piece
+	
+	# I can make it look nicer by defining x and y:
+
+		x = chess_piece.starting_x
+		y = chess_piece.starting_y
+
+		@board[x][y] = chess_piece 
+
 	end 
 
 	def board_can_move?(starting_x, starting_y, ending_x, ending_y)
@@ -23,17 +32,18 @@ class Board
 		if @board[starting_x][starting_y] == nil 
 
 			puts "There is no chess piece at #{starting_x}, #{starting_y}."
-
+# check if the piece is actually trying to move: 
 		elsif ending_x == starting_x && ending_y == starting_y
 			
 			puts "The piece is not changing positions. Please enter a new destination."
 
 		elsif ending_x > 8 || ending_y > 8 || ending_x < 1 || ending_y < 1 
-				
+# check to see if the move stays within the board's bundaries:				
 			puts "Position #{ending_x}, #{ending_y} is off the board. Please enter a new destination."	
-
-		elsif #chess_piece.can_move?(ending_x, ending_y)
-			 @board[starting_x][starting_y].can_move?(ending_x, ending_y)
+# call that piece's .can_move? method:
+		elsif 
+			#chess_piece.can_move?(ending_x, ending_y)
+			 @board[starting_x][starting_y].can_move?(ending_x, ending_y) 
 					
 			puts "The piece can move from #{starting_x}, #{starting_y} to #{ending_x}, #{ending_y}."
 
@@ -45,11 +55,11 @@ class Board
 	end		
 end
 
-# check to see if the move stays within the board's bundaries: 
+ 
 			
-# check if the piece is actually trying to move: 
+
 				
-# call that piece's .can_move? method:
+
 				
 
 
