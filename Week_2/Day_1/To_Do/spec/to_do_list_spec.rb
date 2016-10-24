@@ -2,9 +2,9 @@ require_relative("../to_do_list.rb")
 
 RSpec.describe Task do 
 
-	describe "tests for Task" do 
+	describe "tests for To Do List" do 
 		
-		it "puts task id" do
+		it "puts number of task id" do
 
 			task = Task.new("Buy the milk")
 			task2 = Task.new("Wash the car")
@@ -12,6 +12,15 @@ RSpec.describe Task do
 			expect(task.id).to eq(1)
 			expect(task2.id).to eq(2)
 		end
+
+		it "returns whether or not an instance of a task is done" do
+
+			task = Task.new("Buy the milk")
+			task2 = Task.new("Wash the car")
+
+			expect(task.complete?).to eq(false)
+
+		end	
 
 	end
 end
