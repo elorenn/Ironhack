@@ -10,10 +10,10 @@ class Bishop < ChessPiece
 			
 			(@starting_x - ending_x).abs == (@starting_y - ending_y).abs 
 
-			return "true"
+			return true
 				
 		else
-			return "false"
+			return false
 		end
 	end
 end

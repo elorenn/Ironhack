@@ -43,7 +43,7 @@ class Board
 # call that piece's .can_move? method:
 		elsif 
 			#chess_piece.can_move?(ending_x, ending_y)
-			 @board[starting_x][starting_y].can_move?(ending_x, ending_y) 
+			 @board[starting_x][starting_y].can_move?(ending_x, ending_y)
 					
 			puts "The piece can move from #{starting_x}, #{starting_y} to #{ending_x}, #{ending_y}."
 

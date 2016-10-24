@@ -10,17 +10,17 @@ class Pawn < ChessPiece
 
 			if @starting_y == 7 && @starting_x == ending_x && @starting_y - ending_y == 2
 
-				return "true"
+				return true
 
 			elsif 
 
 				@starting_y != 7 && @starting_x == ending_x && @starting_y - ending_y == 1
 
-				return "true"
+				return true
 
 			else
 
-				return "false"
+				return false
 			end
 		end
 
@@ -30,17 +30,17 @@ class Pawn < ChessPiece
 
 			if @starting_y == 2 && @starting_x == ending_x && @starting_y - ending_y == -2
 
-				return "true"
+				return true
 
 			elsif 
 
 				@starting_y != 2 && @starting_x == ending_x && @starting_y - ending_y == -1
 
-				return "true"
+				return true
 
 			else
 
-				return "false"
+				return false
 			end
 		end
 	end

@@ -12,9 +12,9 @@ class King < ChessPiece
 		if 
 			(@starting_x == ending_x && ((ending_y == @starting_y + 1) || (ending_y == @starting_y - 1))) || (((ending_x == @starting_x + 1) || (ending_x == @starting_x - 1)) && starting_y == ending_y) || (((ending_x == @starting_x + 1) || (ending_x == @starting_x - 1)) && ((ending_y == @starting_y + 1) || (ending_y == @starting_y - 1)))
 
-			return "true"
+			return true
 		else
-			return "false"
+			return false
 		end
 	end
 end

@@ -10,10 +10,10 @@ class Queen < ChessPiece
 		if 
 			(@starting_y == ending_y || @starting_x == ending_x) || (@starting_x  - ending_x == @starting_y - ending_y || @starting_x  - ending_x == -(@starting_y - ending_y))
 
-			return "true"
+			return true
 					
 		else
-			return "false"
+			return false
 		end
 	end
 end
