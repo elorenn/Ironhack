@@ -35,5 +35,11 @@ RSpec.describe Task do
 			expect(task.complete?).to eq(false)
 		end
 
+		it "checks created at time" do
+
+			task = Task.new("Buy the milk")
+
+			expect(task.created_at).to be_within(0.1).of(Time.now) 
+		end	
 	end
 end

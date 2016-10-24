@@ -20,4 +20,11 @@ class Task
     def make_incomplete!
     	@completed = false 
     end
+
+    def created_at
+    	@created_at
+    end
+    # def update_content! 
+
+    # end
 end
