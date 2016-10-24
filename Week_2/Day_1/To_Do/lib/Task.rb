@@ -24,7 +24,8 @@ class Task
     def created_at
     	@created_at
     end
-    # def update_content! 
 
-    # end
+    def update_content!(new_content) 
+
+    end
 end

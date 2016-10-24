@@ -41,5 +41,13 @@ RSpec.describe Task do
 
 			expect(task.created_at).to be_within(0.1).of(Time.now) 
 		end	
+
+		it "updates the task's text" do 
+
+			task = Task.new("Walk the milk")
+			task.update_content!("Walk the dog")
+			expect(task.content).to eq("Walk the dog")
+		end
+
 	end
 end
