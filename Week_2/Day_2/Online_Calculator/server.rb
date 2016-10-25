@@ -25,6 +25,4 @@ get "/divide" do
 end
 
 
-# params[:operation]
-
 
