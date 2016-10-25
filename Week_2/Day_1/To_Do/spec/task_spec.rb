@@ -1,4 +1,4 @@
-require_relative("../to_do_list.rb")
+require_relative("../lib/task.rb")
 
 RSpec.describe Task do 
 
