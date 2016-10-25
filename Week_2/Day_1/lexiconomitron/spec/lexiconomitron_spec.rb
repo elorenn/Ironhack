@@ -1,4 +1,5 @@
 require_relative("../lib/lexiconomitron.rb")
+
 describe Lex do 
 
   describe "#eat_t" do
