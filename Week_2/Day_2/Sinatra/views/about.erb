@@ -1,0 +1,14 @@
+<header> My Sinatra App </header>
+<h1>Lorena's Page</h1>
+<h2>About Page</h2>
+<p>I'm learning how to use sinatra to create ruby web apps. How fun!</p>
+<% if Date.today.tuesday? %>
+	<p>
+		I am <strong>NOT</strong> a fan of Tuesdays like today.
+	</p>
+<% end %> 
+
+<p> 
+	Izzy Ironside was born on
+	<%= Time.now %>
+</p>
