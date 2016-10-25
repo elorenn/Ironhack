@@ -1,8 +1,8 @@
-require_relative("../lib/task.rb")
+require_relative("../lib/Task.rb")
 
 RSpec.describe Task do 
 
-	describe "tests for To Do List" do 
+	describe "tests for Task" do 
 		
 		it "puts number of task id" do
 

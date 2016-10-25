@@ -1,12 +1,12 @@
-require_relative("lib/task.rb")
+require_relative("task.rb")
 
-class TodoList
+class ToDoList
     attr_reader :tasks
     def initialize
         @tasks = []
     end
 
-    def add_task
+    def add_task(task)
 
     end
 end
