@@ -1,5 +1,5 @@
 class Task
-    attr_reader :content, :id
+    attr_reader :content, :id, :completed, :created_at, :updated_at
 
     @@current_id = 1
 

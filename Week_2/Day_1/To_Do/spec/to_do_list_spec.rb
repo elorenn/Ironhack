@@ -28,6 +28,7 @@ RSpec.describe ToDoList do
 		it "adds a task to our to do list" do
 
 				list.add_task(task2)
+
 				expect(list.tasks.length).to eq(1)
 				expect(list.tasks[0].content).to include("Do groceries")
 		end
@@ -40,9 +41,40 @@ RSpec.describe ToDoList do
 			
 			list.add_task(task1)
 		 	list.delete_task(task1.id)
+
 		 	expect(list.tasks.length).to eq(0)
 		 	#expect(list.tasks[0]).to eq(nil)
+		 	#expect(list.tasks).not_to include(task1)
 		end
-
 	end
+
+	describe "find_task_by_id" do 
+
+		it "finds a task by id and returns content" do
+
+				# list.add_task(task2)
+				# list.add_task(task3)
+
+				# list.find_task_by_id(1)
+				# expect(task.content).to eq(@id)
+
+				expect(list.find_task_by_id(task1.id)).to eq(task1.content)
+		end
+	end
+
+	describe "sort_by_created" do
+
+		it "sorts tasks by time created" do
+
+			list.add_task(task1)
+			list.add_task(task2)
+			expect(list.sort_by_created(task1, task2)).to eq([task1, task2])
+		end
+	end
+
 end
+
+
+
+
+
