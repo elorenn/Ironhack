@@ -5,35 +5,30 @@ get "/" do
   erb(:main_calculator)
 end
 
-post "/calculator" do
+post "/result" do
 	calc = Calculator.new(params[:first_number], params[:second_number]) 
 
 	if params[:operation] == "addition"
 		
-		calc.addition
+		@result = calc.addition
 		"The addition of #{@first_number} and #{@second_number} is #{@result}."
 
 	elsif params[:operation] == "subtraction"
 				
-		calc.subtraction
+		@result = calc.subtraction
 		"The subtraction of #{@first_number} and #{@second_number} is #{@result}."
 
 	elsif params[:operation] == "multiplication"
 										
-		calc.multiplication
+		@result = calc.multiplication
 		"The multiplication of #{@first_number} and #{@second_number} is #{@result}."
 
 	elsif params[:operation] == "division"
 		
-		calc.division
+		@result = calc.division
 		"The division of #{@first_number} and #{@second_number} is #{@result}."
 	end
 
-	# operation = params[:addition]
-	# first = params[:first_number].to_f
-	# second = params[:second_number].to_f
-	# result = first + second
-	# "The addition of #{first} and #{second} is #{result}."
 end
 
 
