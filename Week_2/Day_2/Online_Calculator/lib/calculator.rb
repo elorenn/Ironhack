@@ -1,14 +1,13 @@
 class Calculator
-	
+	attr_accessor(:result)
 
 	def initialize(first_number, second_number)
 		@first_number = first_number.to_f
 		@second_number = second_number.to_f
-		
+ 	
 	end	
 	def addition
 		result = @first_number + @second_number
-
 	end	
 
 	def subtraction
@@ -24,5 +23,3 @@ class Calculator
 	end	
 
 end
-jaa = Calculator.new("1","2")
- jaa.addition

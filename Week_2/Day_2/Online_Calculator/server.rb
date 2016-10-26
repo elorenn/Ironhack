@@ -11,20 +11,22 @@ post "/calculator" do
 	if params[:operation] == "addition"
 		
 		calc.addition
-
+		"The addition of #{@first_number} and #{@second_number} is #{@result}."
 
 	elsif params[:operation] == "subtraction"
 				
 		calc.subtraction
-	
+		"The subtraction of #{@first_number} and #{@second_number} is #{@result}."
+
 	elsif params[:operation] == "multiplication"
 										
 		calc.multiplication
+		"The multiplication of #{@first_number} and #{@second_number} is #{@result}."
 
 	elsif params[:operation] == "division"
 		
 		calc.division
-
+		"The division of #{@first_number} and #{@second_number} is #{@result}."
 	end
 
 	# operation = params[:addition]
