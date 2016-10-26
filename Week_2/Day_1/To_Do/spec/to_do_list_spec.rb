@@ -27,9 +27,9 @@ RSpec.describe ToDoList do
 
 		it "adds a task to our to do list" do
 
-				list.add_task("Do laundry")
+				list.add_task(task2)
 				expect(list.tasks.length).to eq(1)
-				expect(list.tasks).to include("Do laundry")
+				expect(list.tasks[0].content).to include("Do groceries")
 		end
 
 	end	
@@ -37,10 +37,11 @@ RSpec.describe ToDoList do
 	describe "delete_task" do 
 
 		it "deletes task by its id" do
-
+			
+			list.add_task(task1)
 		 	list.delete_task(task1.id)
-
-		 	expect(list.tasks).not_to include("Do laundry")
+		 	expect(list.tasks.length).to eq(0)
+		 	#expect(list.tasks[0]).to eq(nil)
 		end
 
 	end

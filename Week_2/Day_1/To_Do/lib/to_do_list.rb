@@ -12,7 +12,7 @@ class ToDoList
     end
 
     def delete_task(task_id)
-    	
+    	@tasks.delete_if { |task| @id = task_id }
     end
 end
 
