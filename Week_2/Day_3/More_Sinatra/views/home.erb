@@ -1,0 +1,49 @@
+<!DOCTYPE HTML5>
+
+
+<html>
+
+
+<header>Sinatra app</header>
+
+<h1>Lorena's Page</h1>
+
+<h2>Home Page</h2>
+
+<p>My first Sinatra app. Woo!</p>
+<p> Let's Learn to Make a Web App: </p>
+
+
+<% if @drank != nil %>
+	<p> 
+		Your currently selected beverage is:
+		<strong> <%= @drank %> </strong>
+	</p>
+<% end %>
+
+
+<ul>
+
+	<li>
+		<a href="/"> Home </a>
+	</li>
+
+	<li>
+		<a href="/hi"> Hello </a>
+	</li>
+
+	<li>
+		<a href="/about"> About </a>
+	</li>
+
+	<li>
+		<a href="/best_pizza"> Favorite Pizza </a>
+	</li>
+
+	<li>
+		<a href="/new_page"> New Page </a>
+	</li>
+
+</ul>
+
+</html>
