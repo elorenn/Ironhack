@@ -1,5 +1,5 @@
 class Calculator
-	attr_accessor(:result)
+	attr_accessor(:result, :first_number, :second_number)
 
 	def initialize(first_number, second_number)
 		@first_number = first_number.to_f
