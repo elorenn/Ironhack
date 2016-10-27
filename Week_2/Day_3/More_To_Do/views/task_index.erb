@@ -6,10 +6,12 @@
 
 		<h1>Welcome to the To-Do List:</h1>
 			
-			<!--  display all the tasks -->
-			<%= 
+			<h2>Your List:</h2>
+
+			<% @task.each do |task| %>
+				<li> <%= task.content %> </li>
+			<% end %>
 			
-			%>
 			
 			<a href="/"> Home </a> <BR>
 			<a href="/add_tasks"> Add Tasks </a>

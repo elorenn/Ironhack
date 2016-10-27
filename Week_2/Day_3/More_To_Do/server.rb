@@ -8,22 +8,31 @@ require_relative('lib/to_do_list.rb')
 
 
 todo_list = ToDoList.new("Lorena")
+# Task.new("Do laundry") 
+# Task.new("Do groceries") 
+# Task.new("Turn in form") 
+
 #todo_list.load_tasks
 
 get "/" do
+	@task = todo_list.tasks
   erb(:home)
 end
 
 get "/list" do
-	#@tasks = list.tasks
+	@task = todo_list.tasks
   erb(:task_index)
 end
 
 get "/add_tasks" do
-	#@tasks = list.tasks
+	@task = todo_list.tasks
   erb(:add_tasks)
 end
 
-post "/create_tasks" do
-	
+post "/create_task" do
+	new_task = Task.new(params[:new_task])
+
+	todo_list.add_task(new_task)
+
+	redirect to ("/")
 end

@@ -6,16 +6,20 @@
 
 		<h1>Welcome to the To-Do List:</h1>
 			
-			<!--  display all the tasks -->
+			<h2>Your List:</h2>
+
+			<% @task.each do |task| %>
+				<li> <%= task.content %> </li>
+			<% end %>
 
 			<h2>Add Tasks to Your List:</h2>
 			
 			<form action="/create_task" method="post">
 				
 				<label for="task">New Task:</label>
-				<input type="text" id="task" name="new task" placeholder="Do laundry."> 
+				<input type="text" name="new_task" placeholder="Do laundry."> 
 
-				<button type="submit" name="new task" value="create_task">Add Task</button>
+				<input type="submit" value="submit">
 
 			</form>
 
