@@ -28,6 +28,22 @@ post "/create_task" do
 	new_task = Task.new(params[:new_task])
 
 	todo_list.add_task(new_task)
-
-	redirect to ("/")
+	# todo_list.save
+	redirect to ("/add_tasks")
 end
+
+post "/complete_task/:id" do
+	search = (params[:mark_as_complete]).to_f
+	task = todo_list.find_task_by_id(search)
+	puts "BANANAA"
+	puts params[:mark_as_complete]
+	puts params[:mark_as_complete].class 
+	puts search.class
+	task.complete!
+	# todo_list.save
+	redirect to ("/add_tasks")
+end
+
+
+
+
