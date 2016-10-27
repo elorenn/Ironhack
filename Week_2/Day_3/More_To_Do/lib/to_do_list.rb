@@ -1,7 +1,7 @@
-require_relative("task.rb")
+require_relative("Task.rb")
 
 class ToDoList
-    attr_reader :tasks :user
+    attr_reader :tasks, :user
 
     def initialize(user)
         @tasks = []

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML5>
+
+<html>
+
+	<body ALIGN=Center>
+
+		<h1>Welcome to the TodoList</h1>
+			
+			<form action="/create_task" method="post">
+				
+				<label for="task">New Task:</label>
+				<input type="text" id="task" name="new task" placeholder="Do laundry."> 
+
+				<button type="submit" name="new task" value="create_task">Add Task</button>
+
+			</form>
+	</body>
+</html>
