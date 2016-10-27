@@ -16,11 +16,6 @@ todo_list = ToDoList.new("Lorena")
 
 get "/" do
 	@task = todo_list.tasks
-  erb(:home)
-end
-
-get "/list" do
-	@task = todo_list.tasks
   erb(:task_index)
 end
 
