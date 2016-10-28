@@ -36,20 +36,30 @@ end
 #params are hashes, so "key => value"
 
 post "/complete_task/:id" do
-	search = (params[:select_item]).to_f
-	task = todo_list.find_task_by_id(search)
+	thing_to_do = params[:button]
+	search = (params[:select_item])
+	search.map!{|x| x.to_i}
+
+	search.each do |x|
+		task = todo_list.find_task_by_id(x)
+		if thing_to_do == "complete"
+			task.complete!
+		elsif thing_to_do == "delete"
+			todo_list.delete_task(x)	
+		end
+	end  
+
 	# puts "BANANAA"
 	# puts params[:mark_as_complete]
 	# puts params[:mark_as_complete].class 
 	# puts search.class
 
-	task.complete!
 	# todo_list.save
 	redirect to ("/add_tasks")
 end
 
 post "/delete_task/:id" do 
-	search = (params[:select_item]).to_f
+	search = (params[:select_item]).to_i
 	task = todo_list.delete_task(search)
 
 

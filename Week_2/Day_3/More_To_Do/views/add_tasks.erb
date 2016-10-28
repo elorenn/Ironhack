@@ -24,18 +24,20 @@
 
 					<%= task.content %> 
 					
-					<input type="checkbox" id="select" name="select_item" value="<%= task.id %>"> 
+					<input type="checkbox" id="select" name="select_item[]" value="<%= task.id %>"> 
 
 				</li>	
 
 				<% end %>
 				
-				<p> <button type="submit">Completed</button> </p>
+				<p> <button type="submit" name="button" value="complete">Complete</button>
+				 <button type="submit" name="button" value = "delete">Delete</button> </p>
+
 
 				</form>
 
 
-				<form action="/delete_task/:id" method="post">
+				<!-- <form action="/delete_task/:id" method="post">
 
 				<% @task.each do |task| %> 
 
@@ -57,7 +59,7 @@
 
 				<p> <button type="submit">Delete</button> </p>
 
-				</form>
+				</form> -->
 
 			</ul>
 			 
