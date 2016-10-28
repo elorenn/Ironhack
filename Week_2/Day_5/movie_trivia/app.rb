@@ -3,22 +3,37 @@ require "sinatra"
 require "sinatra/reloader" if development? 
 require "imdb"
 
+#require_relative("lib/search.rb")
+
 get "/" do
 	erb :home	
 end
 
-get "/search_results" do
-	the_search = Imdb::Search.new("aliens")
+# get "/search_results" do
+	
+# 	erb(:results) 
+# end
+
+get "/searching" do
+	the_search = Imdb::Search.new(params[:select_word])
 
 	@movies = the_search.movies
+	@twenty_movies = the_search.movies.take(20)
 
-	erb(:results) 
-end
+	@nine_movies = []
+	@twenty_movies.each do |movie| 
+		if movie.poster != nil 
+			@nine_movies << movie 
+		end
+	end
+				
+				
 
-post "/searching" do
+	# matching_movie = @movies.find { |word| word = (params[:select_word]) }
+	# matching_movies = @movies.find{ |movie| movies.title.include?(params[:select_word]) }
+	# puts matching_movies
 	
-	
-	redirect to ("/search_results")
+	erb(:results)
 end
 
 

@@ -4,24 +4,27 @@
 
 	<body ALIGN=Center>
 
-		<h1>Welcome to Movie Trivia!</h1>
-		
-		<p>
-	
-		<form action="/searching" method="post">
-		
-		<label for="word">Choose a word:</label>
-		<input type="text" id="word" name="select_item" placeholder="Funny"> 
-			
-		<button type="submit">Find movies</button>
-		
-			
-		</form>
+		<h1>Results!</h1>
 
-		</p>
-			<a href="/"> Home </a>
-			<!-- <a href="/add_tasks"> Add Tasks </a> -->
-			<!-- <a href="/add_tasks"> Add Tasks </a> -->
+
+		<h2>The 9 Movies:</h2>
+
+			<% @nine_movies.each do |movie| %>
+
+				<li> 
+
+				<img src= "<%= movie.poster %>" >
+
+				</li>
+
+			<% end %>
+			
+			
+		
+	
+
+			<p> <a href="/"> Home </a> </p>
+
 	</body>
 </html>
 
