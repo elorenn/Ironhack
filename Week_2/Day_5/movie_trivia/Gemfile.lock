@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/nickborbe/imdb.git
+  revision: d8e3895d4ffdfe6d482dc677754981568c7abeab
+  specs:
+    imdb (0.8.3)
+      nokogiri (= 1.6.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -20,19 +27,17 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    imdb (0.8.2)
-      nokogiri (= 1.6.2.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     lumberjack (1.0.10)
     method_source (0.8.2)
-    mini_portile (0.6.0)
+    mini_portile (0.6.2)
     multi_json (1.12.1)
     nenv (0.3.0)
-    nokogiri (1.6.2.1)
-      mini_portile (= 0.6.0)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -84,7 +89,7 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-rspec
-  imdb
+  imdb!
   rack
   rack-test
   rspec

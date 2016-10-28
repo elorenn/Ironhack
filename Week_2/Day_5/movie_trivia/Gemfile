@@ -3,10 +3,10 @@ source "https://rubygems.org"
 gem "sinatra"
 
 gem "sinatra-contrib"
-# ^this will auto-reload Sinatra, 
-# so you don't have to manually reload each time you make a change
+gem "imdb", :git => "https://github.com/nickborbe/imdb.git"
 
-gem "imdb"
+# ************
+
 
 gem "rspec"
 gem "rack"
