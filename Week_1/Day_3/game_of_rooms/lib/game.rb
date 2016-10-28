@@ -21,12 +21,12 @@ attr_accessor(:list_of_rooms)
 	# end
 
 	def start_game
-		#pos = 0 
+		pos = 0 
 
 		while @current_position < list_of_rooms.length 
 					puts "You are in #{@list_of_rooms[@current_position].description}. Which direction would you like to go (N, S, E, W)?"
 					user_input = gets.chomp
-					if user_input == "exit"
+					if user_input == "quit"
 						break
 
 					elsif

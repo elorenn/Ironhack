@@ -1,0 +1,18 @@
+source "https://rubygems.org"
+
+gem "sinatra"
+
+gem "sinatra-contrib"
+# ^this will auto-reload Sinatra, 
+# so you don't have to manually reload each time you make a change
+
+gem "imdb"
+
+gem "rspec"
+gem "rack"
+gem "rack-test"
+
+
+gem "guard"
+gem "guard-rspec"
+# ^ guard will run rspec if you make changes
