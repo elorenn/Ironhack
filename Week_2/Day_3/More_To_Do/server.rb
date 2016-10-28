@@ -32,18 +32,26 @@ post "/create_task" do
 	redirect to ("/add_tasks")
 end
 
+
+#params are hashes, so "key => value"
+
 post "/complete_task/:id" do
 	search = (params[:mark_as_complete]).to_f
 	task = todo_list.find_task_by_id(search)
-	puts "BANANAA"
-	puts params[:mark_as_complete]
-	puts params[:mark_as_complete].class 
-	puts search.class
+	# puts "BANANAA"
+	# puts params[:mark_as_complete]
+	# puts params[:mark_as_complete].class 
+	# puts search.class
+
 	task.complete!
 	# todo_list.save
 	redirect to ("/add_tasks")
 end
 
+post "/delete_task/:id" do 
+	search = (params[ ... ]).to_f
+	task = todo_list.delete_task(search)
 
 
-
+	redirect to ("/add_tasks")
+end

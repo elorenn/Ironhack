@@ -13,30 +13,39 @@
 				<form action="/complete_task/:id" method="post">
 
 				<% @task.each do |task| %> 
-				<li <% if task.completed %>
+
+				<li 
+					<% if task.completed %>
 					style="color: green"
 					<% else %>
 					style="color: red"
-					<% end %>
-					> <%= task.content %> 
+					<% end %> 
+				> 
+
+					<%= task.content %> 
 	
 					<input type="checkbox" id="complete" name="mark_as_complete" value="<%= task.id %>"> 
+
 				</li>	
+
 				<% end %>
-				<button type="submit">Completed</button>
+				
+				<p> <button type="submit">Completed</button> </p>
+
 				</form>
+
 			</ul>
 			 
 
 			<h2>Add Tasks to Your List:</h2>
-			
+				<!-- the input id is used for CSS -->
 			<form action="/create_task" method="post">
 				
-				<label for="task">New Task:</label>
-				<input type="text" id="task" name="new_task" placeholder="Do laundry."> 
+				<label for="task">What do you need to do?:</label>
+				<input type="text" id="task" name="new_task" placeholder="Fold 100 paper cranes."> 
 
-				<input type="submit" value="submit">
-
+				<!-- <input type="submit" value="submit"> -->
+				<button type="submit">Add Task</button>
 			</form>
 
 			<a href="/"> Home </a> 
