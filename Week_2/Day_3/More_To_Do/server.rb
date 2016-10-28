@@ -36,7 +36,7 @@ end
 #params are hashes, so "key => value"
 
 post "/complete_task/:id" do
-	search = (params[:mark_as_complete]).to_f
+	search = (params[:select_item]).to_f
 	task = todo_list.find_task_by_id(search)
 	# puts "BANANAA"
 	# puts params[:mark_as_complete]
@@ -49,7 +49,7 @@ post "/complete_task/:id" do
 end
 
 post "/delete_task/:id" do 
-	search = (params[ ... ]).to_f
+	search = (params[:select_item]).to_f
 	task = todo_list.delete_task(search)
 
 
