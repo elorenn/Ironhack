@@ -2,34 +2,44 @@
 	border: 1px grey;
 }
 
-
+.div {
+	width: 100%;
+}
 
 .header {
 	background-image: url("https://raw.githubusercontent.com/ironhack-miami-oct-2016/course-examples/master/week3/day1/exercises/1-netflix-landing/images/family.jpg");
-	background-size: 100%;
-
+	background-size: cover;
+	height: 500px;
+	background-repeat: no-repeat;
+	
 }
 
 
 .netflix { 
     width: 25%;
+    position: relative;
+    bottom: 20px;
+
+
 }
 
 #sign-in {
 	position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 25px;
+    right: 25px;
 }
 
 .blocktext {
-	text-align: center;
 	color: #fff;
-	background-color: #000;
-	opacity: .75;
-	padding: 0;
-	margin: 0;
-	size: 50%
+	background-color: rgba(0, 0, 0, 0.75);
+	margin: 5% 25% 25% 25%;
+	width: 50%;
+	padding: 25px;
 
+}
+
+h1 {
+	text-align: left;
 
 }
 
@@ -41,23 +51,32 @@
 	background-color: #008CBA;
 	margin-bottom: 100px; 
 	float: center;
+	margin-left: 25%;
 }
 
-.releases {
-	background-size: 100%;
-	
-    
+
+p {
+	font-size: 20px;
 }
 
 
 .image {
 	border: 1px grey;
-	margin: 15px;
-	width: 100px;
+	margin: 10px;
+	height: 75%;
+	display: inline-block;
+}
+
+.releases {
+	width: 100%;
+	margin-left: 25px;
+	margin-top: 5px;
+	height: 200px;
 }
 
 .footer {
 	background-color: #000;
 	width: 100%;
-	height: 30px;
+	height: 45px;
+	margin-top: 25px;
 }
