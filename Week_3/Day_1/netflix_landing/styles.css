@@ -1,0 +1,63 @@
+.body {
+	border: 1px grey;
+}
+
+
+
+.header {
+	background-image: url("https://raw.githubusercontent.com/ironhack-miami-oct-2016/course-examples/master/week3/day1/exercises/1-netflix-landing/images/family.jpg");
+	background-size: 100%;
+
+}
+
+
+.netflix { 
+    width: 25%;
+}
+
+#sign-in {
+	position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.blocktext {
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	opacity: .75;
+	padding: 0;
+	margin: 0;
+	size: 50%
+
+
+}
+
+#sign-in {
+	background-color: #f44336;
+}
+
+#start {
+	background-color: #008CBA;
+	margin-bottom: 100px; 
+	float: center;
+}
+
+.releases {
+	background-size: 100%;
+	
+    
+}
+
+
+.image {
+	border: 1px grey;
+	margin: 15px;
+	width: 100px;
+}
+
+.footer {
+	background-color: #000;
+	width: 100%;
+	height: 30px;
+}
