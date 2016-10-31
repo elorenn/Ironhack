@@ -24,29 +24,33 @@
 		</form>
 
 		</p>
-		
-
+		<!-- 
 			<% @nine_movies.each do |movie| %>
 
 				<li> 
-
 				<img src= "<%= movie.poster %>" >
-
 				</li>
 
-			<% end %>
-			
-			
-		
-	
+			<% end %> -->
 
-			<p> <a href="/"> Home </a> </p>
+
+			<% @nine_movies.each do |movie| %>
+					
+					<form action="/answer" method="post">
+
+						<input type="hidden" name="correct_year" value= "<%= @random_year %>"> 
+						<input type="hidden" name="movie_year" value="<%= movie.year %>">
+
+						<button type="submit"><img src= "<%= movie.poster %>" ></button>
+					
+					</form>
+			<% end %>
+
+
+		<p> <a href="/"> Home </a> </p>
 
 	</body>
 </html>
-
-
-
 
 
 			

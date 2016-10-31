@@ -1,0 +1,20 @@
+<!DOCTYPE HTML5>
+
+<html>
+
+	<body ALIGN=Center>
+
+		<h1>Answer:</h1>
+
+		<% if (params[:movie_year]) == (params[:correct_year]) %>	
+			<p> That's correct! </p>
+			<p> <a href="/"> Start a new quiz </a> </p>
+		<% else %>	
+			<p> That's incorrect.</p>
+			<p> <a href="/"> Start a new quiz </a> </p>
+		<% end %>		
+
+	</body>
+</html>
+
+
