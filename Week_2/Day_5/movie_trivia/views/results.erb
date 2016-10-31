@@ -9,6 +9,23 @@
 
 		<h2>The 9 Movies:</h2>
 
+
+		<p> Which of these movies was released in 
+			<%= @random_year %>?
+	
+		<form action="/searching" method="get">
+		
+		<label for="word">Choose a word:</label>
+		<input type="text" id="word" name="select_word" placeholder="Funny"> 
+			
+		<button type="submit">Find movies</button>
+		
+			
+		</form>
+
+		</p>
+		
+
 			<% @nine_movies.each do |movie| %>
 
 				<li> 

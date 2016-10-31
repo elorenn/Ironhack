@@ -5,6 +5,8 @@ require "imdb"
 
 #require_relative("lib/search.rb")
 
+# http://www.rubydoc.info/github/ariejan/imdb/master/Imdb/Movie
+
 get "/" do
 	erb :home	
 end
@@ -28,16 +30,19 @@ get "/searching" do
 			end
 		end
 	end
-				
-				
+	@years = []	
+	@nine_movies.each do |movie| 
+			@years << movie.year
+		end
+	@random_year = @years.sample	
 
-	# matching_movie = @movies.find { |word| word = (params[:select_word]) }
-	# matching_movies = @movies.find{ |movie| movies.title.include?(params[:select_word]) }
-	# puts matching_movies
-	
 	erb(:results)
 end
 
+post "/answer" do
+
+	erb(:answer)
+end
 
 # ask the user for a search term
 # returns 9 movies that match search term
