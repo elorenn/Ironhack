@@ -11,7 +11,14 @@
 			<p> <a href="/"> Start a new quiz </a> </p>
 		<% else %>	
 			<p> That's incorrect.</p>
-			<p> <a href="/"> Start a new quiz </a> </p>
+			<p> <button onclick="goBack()">Try again</button>
+
+				<script>
+					function goBack() {
+						window.history.back();
+							}
+				</script>
+			 </p>
 		<% end %>		
 
 	</body>

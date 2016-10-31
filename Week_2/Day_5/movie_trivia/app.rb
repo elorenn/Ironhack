@@ -44,6 +44,12 @@ post "/answer" do
 	erb(:answer)
 end
 
+
+# get "/tryagain" do
+ 
+# 	erb(:results)
+# end
+
 # ask the user for a search term
 # returns 9 movies that match search term
 # then make sure the movies returned all have posters
