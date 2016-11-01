@@ -1,0 +1,62 @@
+body,
+html,
+.eye-header {
+	height: 100%;
+}
+
+
+
+.eye-header {
+	/*styles for all versions*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #f0d2d2;
+
+	/*specific to the extra small version*/
+	background-image: url(https://media.giphy.com/media/spYDGMABSjfri/giphy.gif);
+}
+
+h1 {
+	font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+
+	.eye-header {
+		/*specific to the small version*/
+		background-image: url(https://media.giphy.com/media/3oEduI3YlUnb8gxZjW/giphy.gif);
+	}
+
+	h1 {
+		font-size: 40px;
+		color: #832c4c;
+	}
+}
+
+@media screen and (min-width: 992px) {
+
+	.eye-header {
+		/*specific to the medium version*/
+		background-image: url(https://media.giphy.com/media/tAAc8GKAvZIGs/giphy.gif);
+	}
+
+	h1 {
+		font-size: 50px;
+		color: #5f2031;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+
+	.eye-header {
+		/*specific to the large version*/
+		background-image: url(https://media.giphy.com/media/Cgo1pSy0Q42Xe/giphy.gif);
+	}
+
+	h1 {
+		font-size: 60px;
+		color: #37121d;
+	}
+}
+
