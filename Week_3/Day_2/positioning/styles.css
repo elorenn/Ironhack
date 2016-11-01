@@ -1,0 +1,42 @@
+code {
+	background: #2db34a;
+	border-radius: 6px;
+	color: #fff;
+	display: block;
+	padding: 24px 15px;
+	text-align: center;
+}
+
+.image-wrapper {
+	overflow: auto;
+}
+
+img {
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+
+
+header,
+section,
+aside,
+footer {
+	margin: 0 1.5% 24px 1.5%;
+	border: 1px solid black;
+}
+
+
+/*section {
+	position: absolute;
+	top: 300px;
+	left: 500px;
+}*/
+
+special-header {
+	background-color: pink;
+	padding: 30px 75px;
+	/*width: 100%;*/
+	position: fixed;
+	right: 0;
+}
