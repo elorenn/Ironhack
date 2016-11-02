@@ -57,8 +57,10 @@
 //-------------------- Iteration 3 ------------------------------
 // --------------------------------------------------------------
 
+// If no shift is provided, you should use a default shift of -3:
+// (do this by setting the parameter "shift" to a default of -3)
 
-function caesarCipher (message, shift) {
+function caesarCipher (message, shift= -3) {
 	var letter_array = message.split("");
 	var changed_letters = []
 
@@ -85,7 +87,21 @@ console.log(encrypted);
 encrypted = caesarCipher("Et tu, brute?", 6);
 
 console.log(encrypted);
-//=> "Kz z{, hx{zk?"
+//=> "Kz z{, hx{zk
+
+encrypted = caesarCipher("Et tu, brute?", -3);
+
+console.log(encrypted);
+//=> "Bq qr, _orqb?"
+
+// No shift provided. Default to -3.
+encrypted = caesarCipher("Et tu, brute?");
+
+console.log(encrypted);
+//=> "Bq qr, _orqb?"		
 
 
 
+// --------------------------------------------------------------
+//-------------------- Iteration 4 ------------------------------
+// --------------------------------------------------------------
