@@ -5,7 +5,10 @@ function averageColon (string) {
 	var number_array = []
 
 	string_array.forEach(function (eachString) {
-		eachNumber = Math.floor(eachString)
+		eachNumber = Math.floor(eachString);
+		// could also have done:
+		// eachNumber = Number(eachString);
+
 		number_array.push(eachNumber);
 	});
 	// number_array = [ 80, 70, 90, 100 ]
@@ -15,11 +18,11 @@ function averageColon (string) {
 		total += number_array[i];
 	}
 
-	console.log(total);
+	//console.log(total);
 	// total = 340
 
 	var average = total / number_array.length;
-	console.log(average);
+	//console.log(average);
 	// average = 85
 	return average
 	// you must "return average" in order for test to run "true"
