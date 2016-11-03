@@ -1,23 +1,23 @@
+"use strict";
+
 // class Animal
+
+class Animal {
 // 		def initialize(name, breed, sound)
+	constructor (name, breed, sound) {
+		this.name = name;
+		this.breed = breed;
+		this.sound = sound;
+	}
 
-function Animal (name, breed, sound) {
-	// @name = name
-	this.name = name;
+	chase() {
+		console.log(`${this.name} is chasing cars`);
+	}
 
-	// @breed = breed
-	this.breed = breed;
-
-	// @sound = sound
-	this.sound = sound;
+	bark() {
+		console.log(this.sound);
+	}
 }
 
-Animal.prototype.chase = function() {
-	console.log(`${this.name} is chasing cars.`)
-};
-
-Animal.prototype.bark = function() {
-	console.log(this.sound);
-}; 
 
 module.exports = Animal;
