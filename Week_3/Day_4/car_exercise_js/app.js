@@ -4,7 +4,7 @@ var Car = require("./lib/car.js");
 
 console.log("");
 
-var car1 = new Car("Prius", "spurt spurt")
+var car1 = new Car("Prius", "whooooosshhhhhhh")
 
 car1.startEngine();
 
