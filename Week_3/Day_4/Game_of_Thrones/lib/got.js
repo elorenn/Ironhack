@@ -16,8 +16,10 @@ fs.readFile("./GoTEpisodes.json", 'utf8', fileActions);
 
 
 function afterSearch(ep, n) {
+
 	console.log(`Title: ${ep[n].title} Episode #: ${ep[n].episode_number}`);
 	console.log(ep[n].description); 
-	console.log(`Rating: ${ep[n].rating}`);
+	//console.log(`Rating:` + ep[n].rating + " " + "*".repeat(ep[n].rating) );
+	console.log(`Rating:` + ep[n].rating + " " + "*".repeat(Math.round(ep[n].rating)) );
 }
 
