@@ -21,6 +21,10 @@ function sortEpisodes(ep) {
 		return a.episode_number - b.episode_number
 	});
 
+	ep.forEach(function(episode){
+		searchFor("Jon Snow", episode);
+	}); 
+
 	function highRatings(value) {
 		return value.rating >= 8.5;
 	}
@@ -37,7 +41,16 @@ function sortEpisodes(ep) {
 	filtered.forEach(printStuff)
 }
 
+console.log("");
+fs.readFile("./GoTEpisodes.json", 'utf8', fileActions);
 
+function searchFor(name, episode) {
+	if(episode.description.indexOf(name) > -1) {
+		console.log("-----------------------------------------------------------");
+        console.log(`* * * Jon Snow is in This Episode!!! * * *`);
+        console.log("-----------------------------------------------------------");
+	}
+}
 
 
 // function highestRatings(ep) {
