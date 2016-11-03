@@ -23,6 +23,10 @@ fs.readFile("./GoTEpisodes.json", 'utf8', fileActions);
 // }
 
 function afterSearch(ep) {
+	var sortedEpisode = ep.sort(function(a, b){
+		return a.episode_number - b.episode_number
+	});
+
 	ep.forEach(function(anEpisode) {
 		console.log("")
 		console.log(`Title: ${anEpisode.title} Episode #: ${anEpisode.episode_number}`);
@@ -30,3 +34,13 @@ function afterSearch(ep) {
 		console.log(`Rating:` + anEpisode.rating + " " + "*".repeat(Math.round(anEpisode.rating)) );
 	});	
 }
+
+
+// function afterSearch(ep) {
+//     for (i = 0; i < ep.length; i++) {
+//     console.log(`Title: ${ep[i].title}  Episode ${ep[i].episode_number}`);
+//     console.log(ep[i].description);
+//     console.log('Rating: ' + ep[i].rating + " " + '*'.repeat(Math.round(ep[i].rating)));
+// }}
+
+
