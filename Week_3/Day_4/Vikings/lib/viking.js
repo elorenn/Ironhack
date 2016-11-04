@@ -1,18 +1,24 @@
 "use strict";
 
+var weapons = ["a battle-axe", "a hammer", "a sword", "a spear", "two javelins", "a large knife", "a bow and arrow"]
+
 class Viking {
 
 	constructor(name) {
 		this.name = name;
 		this.health = Math.floor(Math.random() * (100 - 60 + 1)) + 60;
 		this.strength = Math.floor(Math.random() * (20 - 10 +1)) + 10;
+		this.weapon = weapons[Math.floor(Math.random()*weapons.length)];
+
 	} 
+
 
 	stats() {
 		console.log("");
 		console.log(`Name: ${this.name}`);
 		console.log(`Health: ${this.health}`);
 		console.log(`Strength: ${this.strength}`);
+		console.log(`Weapon: ${this.weapon}`);
 		console.log("");
 	}
 
@@ -21,13 +27,12 @@ class Viking {
 		
 			opponent.health = opponent.health - this.strength;
 			console.log("");
-			console.log(`${this.name} attacked ${opponent.name}!`);
+			console.log(`${this.name} attacked ${opponent.name} with ${this.weapon}!`);
 
 		if (opponent.health > 0) {
 			console.log(`${opponent.name}'s health is down to ${opponent.health}!`);
 			console.log("");
 		} else  {
-			console.log(`${opponent.name}'s health is down to ${opponent.health}!`);
 			console.log(`WOAH, WOAH, STOP! ${opponent.name} is out cold!`);
 			console.log(`${this.name} won!`);
 			console.log("");

@@ -42,9 +42,6 @@ class PitFight {
 			// console.log( op1Health	)
 			// console.log( op2Health	)
 		}
-
-		console.log( op1Health	)
-		console.log( op2Health	)
 	}
 }
 

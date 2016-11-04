@@ -18,17 +18,18 @@ class Saxon {
 
 	attack(opponent) {
 		
-		opponent.health = opponent.health - this.strength;
-		console.log("");
-		console.log(`${this.name} attacked ${opponent.name}!`);
+			opponent.health = opponent.health - this.strength;
+			console.log("");
+			console.log(`${this.name} attacked ${opponent.name}!`);
 
 		if (opponent.health > 0) {
 			console.log(`${opponent.name}'s health is down to ${opponent.health}!`);
 			console.log("");
-		} else if (opponent.health <= 0) {
-			console.log(`${opponent.name} died!`);
+		} else  {
+			console.log(`WOAH, WOAH, STOP! ${opponent.name} is out cold!`);
 			console.log(`${this.name} won!`);
 			console.log("");
+
 		}
 
 	}
