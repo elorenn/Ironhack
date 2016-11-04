@@ -20,7 +20,7 @@ class PitFight {
 		console.log("------------------------");
 	}
 
-	battle() {
+	train() {
 		this.introduce();
 
 		var op1Health = this.opponent1.health;

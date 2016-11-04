@@ -1,11 +1,14 @@
 "use strict";
 
+var weapons = ["a rock", "a small knife", "a broad sword", "a wooden spear", "a battle-axe", "a scramasax"]
+
 class Saxon {
 
 	constructor() {
 		this.name = "Anonymous Saxon Warrior"
 		this.health = Math.floor(Math.random() * (80 - 30 + 1)) + 30;
 		this.strength = Math.floor(Math.random() * (15 - 5 + 1)) + 5;
+		this.weapon = weapons[Math.floor(Math.random() * weapons.length)];
 	} 
 
 	stats() {
@@ -17,10 +20,10 @@ class Saxon {
 	}
 
 	attack(opponent) {
-		
+
 			opponent.health = opponent.health - this.strength;
 			console.log("");
-			console.log(`${this.name} attacked ${opponent.name}!`);
+			console.log(`${this.name} attacked ${opponent.name} with ${this.weapon}!`);
 
 		if (opponent.health > 0) {
 			console.log(`${opponent.name}'s health is down to ${opponent.health}!`);

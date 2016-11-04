@@ -8,7 +8,7 @@ class Viking {
 		this.name = name;
 		this.health = Math.floor(Math.random() * (100 - 60 + 1)) + 60;
 		this.strength = Math.floor(Math.random() * (20 - 10 +1)) + 10;
-		this.weapon = weapons[Math.floor(Math.random()*weapons.length)];
+		this.weapon = weapons[Math.floor(Math.random() * weapons.length)];
 
 	} 
 
