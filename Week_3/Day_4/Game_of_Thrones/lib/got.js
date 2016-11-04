@@ -24,7 +24,7 @@ function sortEpisodes(ep) {
 	ep.forEach(function(episode){
 		searchFor("Jon Snow", episode);
 	}); 
-
+// http://www.w3schools.com/jsref/jsref_filter.asp
 	function highRatings(value) {
 		return value.rating >= 8.5;
 	}
@@ -32,22 +32,38 @@ function sortEpisodes(ep) {
 
 	function printStuff(anEpisode){
 		console.log("")
-		console.log(`Title: ${anEpisode.title} Episode #: ${anEpisode.episode_number}`);
+		console.log(`Title: "` + anEpisode.title + `" Episode #: ${anEpisode.episode_number}`);
 		console.log(anEpisode.description); 
 		console.log(`Rating:` + anEpisode.rating + " " + "*".repeat(Math.round(anEpisode.rating)) );
 		
 	}
 
-	filtered.forEach(printStuff)
+	console.log("");
+	console.log("All the Episodes in Order:");
+	console.log("-----------------------------------------");
+	console.log("");	
+	ep.forEach(printStuff)
+
+	console.log("");
+	console.log("Episodes with Ratings of 8.5 or Above:");
+	console.log("-----------------------------------------");
+	console.log("");	
+	filtered.forEach(printStuff);
+
+	
 }
 
 console.log("");
 fs.readFile("./GoTEpisodes.json", 'utf8', fileActions);
 
+// The indexOf() method returns the position of the first occurrence 
+// of a specified value in a string.
+// This method returns -1 if the value to search for never occurs.
+
 function searchFor(name, episode) {
 	if(episode.description.indexOf(name) > -1) {
 		console.log("-----------------------------------------------------------");
-        console.log(`* * * Jon Snow is in This Episode!!! * * *`);
+        console.log(`* * * Jon Snow is in ${episode.title}!!! * * *`);
         console.log("-----------------------------------------------------------");
 	}
 }
