@@ -18,6 +18,7 @@ class Viking {
 
 	attack(opponent) {
 		opponent.health = opponent.health - this.strength
+		console.log(`${this.name} attacked ${opponent.name}!`)
 		console.log(`${opponent.name}'s health is down to ${opponent.health}!`);
 	}
 }
@@ -39,3 +40,6 @@ module.exports = Viking;
 // stop before = health < 1 
 // highest strength = 10
 // lowest strength = 2
+
+
+// would be cool if each had a list of weapons and when you attack, it randomly picks one.
