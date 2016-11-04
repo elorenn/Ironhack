@@ -33,7 +33,12 @@ vikingArmy.addWarrior(viking7);
 vikingArmy.addWarrior(viking8);
 vikingArmy.addWarrior(viking9);
 
-console.log(vikingArmy);
+// console.log(vikingArmy);
+// console.log("");
+
+// vikingArmy.vikingBattleCry();
+//vikingArmy.battleCry();
+
 console.log("");
 
 // ----------------------------------
@@ -62,9 +67,25 @@ saxonArmy.addWarrior(saxon7);
 saxonArmy.addWarrior(saxon8);
 saxonArmy.addWarrior(saxon9);
 
-console.log(saxonArmy);
+// console.log(saxonArmy);
+// console.log("");
+
+// saxonArmy.saxonBattleCry();
+
+//saxonArmy.battleCry();
+
 console.log("");
 
+// Battle:
+// ----------------------------------
+
+var war = new BattleField(vikingArmy, saxonArmy); 
+
+war.battle();
+
+
+// Training (aka Pit Fight):
+// ----------------------------------
 
 //var training1 = new PitFight(viking1, viking2);
 //var training2 = new PitFight(viking3, viking4);

@@ -5,7 +5,7 @@ var weapons = ["a rock", "a small knife", "a broad sword", "a wooden spear", "a 
 class Saxon {
 
 	constructor() {
-		this.name = "Anonymous Saxon Warrior"
+		this.name = "Anonymous Saxon Warrior";
 		this.health = Math.floor(Math.random() * (80 - 30 + 1)) + 30;
 		this.strength = Math.floor(Math.random() * (15 - 5 + 1)) + 5;
 		this.weapon = weapons[Math.floor(Math.random() * weapons.length)];
