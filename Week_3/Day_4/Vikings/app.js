@@ -81,9 +81,9 @@ console.log("");
 
 var theWar = new BattleField(vikingArmy, saxonArmy); 
 
-theWar.intro();
+//theWar.intro();
 
-//theWar.war();
+theWar.war();
 
 // Training (aka Pit Fight):
 // ----------------------------------

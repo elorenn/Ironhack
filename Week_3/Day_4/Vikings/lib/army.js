@@ -20,10 +20,12 @@ class Army {
 		setTimeout(function () {
 			console.log("");
 			console.log(`"` + `Odin owns you all!` + `"`);
+			console.log("");
 		}, 12000);
 
 		setTimeout(function () {
-			console.log(`"` + `Shatter and break their spirits! Make shields tremble!` + `"`);
+			console.log(`"` + `Shatter and break their spirits! Make their shields tremble!` + `"`);
+			console.log("");
 		}, 14000);	
 
 		setTimeout(function () {	

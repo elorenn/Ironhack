@@ -31,6 +31,7 @@ class Saxon {
 			console.log("");
 		} else  {
 			console.log(`WOAH, WOAH, STOP! ${opponent.name} is out cold!`);
+			console.log("");
 			console.log(`${this.name} won!`);
 			console.log("");
 

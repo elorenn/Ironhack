@@ -43,7 +43,6 @@ class BattleField {
 
 		setTimeout(function () {
 			console.log("The viking general rallies his troops:");
-			console.log("");
 		}, 10000);
 
 		this.army1.vikingBattleCry();
@@ -74,9 +73,9 @@ class BattleField {
 		var op1Health = vWarrior.health;
 		var op2Health = sWarrior.health;
 
-
+		
 		for (; op1Health >= 0 && op2Health >= 0 ; op1Health = vWarrior.health, op2Health = sWarrior.health )  {
-			
+		
 			if (vWarrior.health > 0) {
 				vWarrior.attack(sWarrior);
 			// if warrior is alive, attacks the other	
@@ -86,7 +85,7 @@ class BattleField {
 				sWarrior.attack(vWarrior);
 			}; 
 
-		};
+		}
 
 
 		if (op1Health > 0) {
@@ -107,41 +106,42 @@ class BattleField {
 	war() {
 		this.intro();
 		
-		
+	
 		for (var i = 0; i < this.army1.army.length; i++ ) {
 			this.battle();
 
 		};
 
+
 	
-		if (vLiving.length > 0) {
-			console.log(`Viking Survivors: ` + vLiving.length + ` ` + `(` + vLiving + `)`);
-		} else {
-			console.log(`Viking Survivors: ` + vLiving.length);
-		};
-		if (vDead.length > 0) {
-			console.log(`Viking Casualties: ` + vDead.length + ` ` + `(` + vDead + `)`);
-		} else {
-			console.log(`Viking Casualties: ` + vDead.length);
-		};
+			if (vLiving.length > 0) {
+				console.log(`Viking Survivors: ` + vLiving.length + ` ` + `(` + vLiving + `)`);
+			} else {
+				console.log(`Viking Survivors: ` + vLiving.length);
+			};
+			if (vDead.length > 0) {
+				console.log(`Viking Casualties: ` + vDead.length + ` ` + `(` + vDead + `)`);
+			} else {
+				console.log(`Viking Casualties: ` + vDead.length);
+			};
+			
+			console.log("");
+
+			console.log(`Saxon Survivors: ` + sLiving.length);
+			console.log(`Saxon Casualties: ` + sDead.length);
+			
+			console.log("");
+
+			if (vLiving.length > sLiving.length) {
+				console.log("Vikings WON!");
+			}else if (sLiving.length > vLiving.length) {
+				console.log("Saxons WON!");
+			} else {
+				console.log("It's a TIE!");
+			};
+
+			console.log("");
 		
-		console.log("");
-
-		console.log(`Saxon Survivors: ` + sLiving.length);
-		console.log(`Saxon Casualties: ` + sDead.length);
-		
-		console.log("");
-
-		if (vLiving.length > sLiving.length) {
-			console.log("Vikings WON!");
-		}else if (sLiving.length > vLiving.length) {
-			console.log("Saxons WON!");
-		} else {
-			console.log("It's a TIE!");
-		};
-
-		console.log("");
-
 	};
 
 

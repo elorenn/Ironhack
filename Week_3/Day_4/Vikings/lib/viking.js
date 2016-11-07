@@ -25,15 +25,17 @@ class Viking {
 
 	attack(opponent) {
 		
-			opponent.health = opponent.health - this.strength;
-			console.log("");
-			console.log(`${this.name} attacked ${opponent.name} with ${this.weapon}!`);
+		opponent.health = opponent.health - this.strength;
+
+		console.log("");
+		console.log(`${this.name} attacked ${opponent.name} with ${this.weapon}!`);
 
 		if (opponent.health > 0) {
 			console.log(`${opponent.name}'s health is down to ${opponent.health}!`);
 			console.log("");
 		} else  {
 			console.log(`WOAH, WOAH, STOP! ${opponent.name} is out cold!`);
+			console.log("");
 			console.log(`${this.name} won!`);
 			console.log("");
 
