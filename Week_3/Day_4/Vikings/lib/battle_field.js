@@ -5,6 +5,13 @@ var Saxon = require("./saxon.js");
 var Army = require("./army.js");
 
 
+
+var vDead = [];
+var vLiving = [];
+var sDead = [];
+var sLiving = [];
+
+
 class BattleField {
 
 	constructor(army1, army2) {
@@ -23,26 +30,24 @@ class BattleField {
 		console.log("");
 	};
 
+
 	battle() {
-		this.intro();
 
 		//gets a random warrior from each army:
 		var vWarrior = this.army1.army[Math.floor(Math.random() * this.army1.army.length)];
 		var sWarrior = this.army2.army[Math.floor(Math.random() * this.army2.army.length)];
 
+		// var vWarrior = this.army1.army[0];
+		// var sWarrior = this.army2.army[0];
 
-		vWarrior.stats();
-		sWarrior.stats();
+
+		// vWarrior.stats();
+		// sWarrior.stats();
 
 
 		var op1Health = vWarrior.health;
 		var op2Health = sWarrior.health;
 
-		var vDead = [];
-		var vLiving = [];
-
-		var sDead = [];
-		var sLiving = [];
 
 		for (; op1Health >= 0 && op2Health >= 0 ; op1Health = vWarrior.health, op2Health = sWarrior.health )  {
 			
@@ -70,11 +75,55 @@ class BattleField {
 			sDead.push(sWarrior.name);
 		}
 
-		console.log(`Alive: `+ vLiving + sLiving);
-		console.log(`Dead: ` + vDead + sDead);
 
 	};
 
+	war() {
+		this.intro();
+		
+		this.battle();
+		this.battle();
+		this.battle();
+		this.battle();
+		this.battle();
+		this.battle();
+		this.battle();
+		this.battle();
+		this.battle();
+
+
+		if (vLiving.length > 0) {
+			console.log(`Viking Survivors: ` + vLiving.length + ` ` + `(` + vLiving + `)`);
+		} else {
+			console.log(`Viking Survivors: ` + vLiving.length);
+		};
+		if (vDead.length > 0) {
+			console.log(`Viking Dead: ` + vDead.length + ` ` + `(` + vDead + `)`);
+		} else {
+			console.log(`Viking Dead: ` + vDead.length);
+		};
+		
+		console.log("");
+
+		console.log(`Saxon Survivors: ` + sLiving.length);
+		console.log(`Saxon Dead: ` + sDead.length);
+		
+		console.log("");
+
+		if (vLiving.length > sLiving.length) {
+			console.log("Vikings WON!");
+		}else if (sLiving.length > vLiving.length) {
+			console.log("Saxons WON!");
+		} else {
+			console.log("It's a TIE!");
+		};
+
+
+
+	};
+
+
 }
+
 
 module.exports = BattleField; 

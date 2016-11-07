@@ -14,13 +14,6 @@ class Army {
 		//add warriors to your army
 	};
 
-	// battleCry() {
-	// 	if (this.Army.indexOf("Freyja") !== -1) {
-	// 		console.log("Odin owns you all!");
-	// 	} else {
-	// 		console.log("The vikings are coming! RUNNNNN!!!");
-	// 	};
-	// };
 
 	vikingBattleCry() {
 		console.log("");

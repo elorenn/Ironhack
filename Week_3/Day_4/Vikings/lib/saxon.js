@@ -6,8 +6,8 @@ class Saxon {
 
 	constructor() {
 		this.name = "Anonymous Saxon Warrior";
-		this.health = Math.floor(Math.random() * (80 - 30 + 1)) + 30;
-		this.strength = Math.floor(Math.random() * (15 - 5 + 1)) + 5;
+		this.health = Math.floor(Math.random() * (90 - 50 + 1)) + 50;
+		this.strength = Math.floor(Math.random() * (19 - 8 + 1)) + 8;
 		this.weapon = weapons[Math.floor(Math.random() * weapons.length)];
 	} 
 

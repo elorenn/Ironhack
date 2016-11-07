@@ -79,10 +79,11 @@ console.log("");
 // Battle:
 // ----------------------------------
 
-var war = new BattleField(vikingArmy, saxonArmy); 
+var theWar = new BattleField(vikingArmy, saxonArmy); 
 
-war.battle();
+// theWar.battle();
 
+theWar.war();
 
 // Training (aka Pit Fight):
 // ----------------------------------
