@@ -81,32 +81,28 @@ class BattleField {
 	war() {
 		this.intro();
 		
-		this.battle();
-		this.battle();
-		this.battle();
-		this.battle();
-		this.battle();
-		this.battle();
-		this.battle();
-		this.battle();
-		this.battle();
+		
+		for (var i = 0; i < this.army1.army.length; i++ ) {
+			this.battle();
 
+		};
 
+	
 		if (vLiving.length > 0) {
 			console.log(`Viking Survivors: ` + vLiving.length + ` ` + `(` + vLiving + `)`);
 		} else {
 			console.log(`Viking Survivors: ` + vLiving.length);
 		};
 		if (vDead.length > 0) {
-			console.log(`Viking Dead: ` + vDead.length + ` ` + `(` + vDead + `)`);
+			console.log(`Viking Casualties: ` + vDead.length + ` ` + `(` + vDead + `)`);
 		} else {
-			console.log(`Viking Dead: ` + vDead.length);
+			console.log(`Viking Casualties: ` + vDead.length);
 		};
 		
 		console.log("");
 
 		console.log(`Saxon Survivors: ` + sLiving.length);
-		console.log(`Saxon Dead: ` + sDead.length);
+		console.log(`Saxon Casualties: ` + sDead.length);
 		
 		console.log("");
 
@@ -117,6 +113,8 @@ class BattleField {
 		} else {
 			console.log("It's a TIE!");
 		};
+
+		console.log("");
 
 
 
