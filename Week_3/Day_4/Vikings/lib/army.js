@@ -16,18 +16,34 @@ class Army {
 
 
 	vikingBattleCry() {
-		console.log("");
-		console.log(`"` + `Odin owns you all!` + `"`);
-		console.log(`"` + `Shatter and break their spirits! Make shields tremble!` + `"`);
-		console.log(`"` + `Uproot their hope! Release the warcry with an echo of steel:` + `"`);
-		console.log(`* * *` + `"` + `BARBARIC YAWPPPP!` + `"` + `* * *`);
-		console.log("");
+
+		setTimeout(function () {
+			console.log("");
+			console.log(`"` + `Odin owns you all!` + `"`);
+		}, 12000);
+
+		setTimeout(function () {
+			console.log(`"` + `Shatter and break their spirits! Make shields tremble!` + `"`);
+		}, 14000);	
+
+		setTimeout(function () {	
+			console.log(`"` + `Uproot their hope! Release the warcry with an echo of steel:` + `"`);
+			console.log("");
+		}, 16000);	
+
+		setTimeout(function () {
+			console.log(`* * *` + `"` + `BARBARIC YAWPPPP!` + `"` + `* * *`);
+			console.log("");
+		}, 18000);	
+
 	};
 
 	saxonBattleCry() {
-		console.log("");
-		console.log(`"` + `The vikings are coming! RUNNNNN!!!` + `"`);
-		console.log("");
+		setTimeout(function () {
+			console.log("");
+			console.log(`"` + `The vikings are coming! RUNNNNN!!!` + `"`);
+			console.log("");
+		}, 6000);
 	};
 
 }

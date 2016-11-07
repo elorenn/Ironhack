@@ -20,13 +20,39 @@ class BattleField {
 	};
 
 	intro() {
-		console.log("Nine vikings appear on the hillside. The sun glaring behind them, casting long ominous shadows.");
-		console.log("The saxon villagers look up:");
+
+
+		console.log("Nine vikings appear on the hillside.");
+		
+
+		setTimeout(function () {
+			console.log("The sun glaring behind them, casting long ominous shadows.");
+			console.log("");
+		}, 2000);
+
+		setTimeout(function () {
+			console.log("The saxon villagers look up:");
+		}, 4000);	
+
 		this.army2.saxonBattleCry();
-		console.log("The villagers scatter.");
-		console.log("The viking general rallies his troops:");
+
+		setTimeout(function () {
+			console.log("The villagers scatter.");
+			console.log("");
+		}, 8000);	
+
+		setTimeout(function () {
+			console.log("The viking general rallies his troops:");
+			console.log("");
+		}, 10000);
+
 		this.army1.vikingBattleCry();
-		console.log("The vikings charge down the hillside.");
+
+		setTimeout(function () {
+			console.log("The vikings charge down the hillside.");
+			console.log("");
+		}, 20000);
+
 		console.log("");
 	};
 
@@ -115,8 +141,6 @@ class BattleField {
 		};
 
 		console.log("");
-
-
 
 	};
 
