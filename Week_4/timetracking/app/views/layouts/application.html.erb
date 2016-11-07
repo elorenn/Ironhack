@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta charset="utf-8">
     <title>Timetracking</title>
     <%= csrf_meta_tags %>
 
@@ -9,6 +10,28 @@
   </head>
 
   <body>
+   <!-- things you want above the content in EVERY page, go above the yield -->
+
+  	<header>
+ 	 <h1> 
+ 	 	<a href="/">
+ 	 	Tmtrcking
+ 	 	</a>
+ 	 </h1>
+
+ 	<%= render "snippets/navigation" %>
+
+ 	<!-- app/snippets/navigtion.html.erb -->
+ 	
+	</header>
+ 	
     <%= yield %>
+
+    <!-- things you want below the content in EVERY page, go below the yield -->
+
+    <footer>
+    	<p> Made with &hearts; at Ironhack. </p>
+    </footer>
+
   </body>
 </html>
