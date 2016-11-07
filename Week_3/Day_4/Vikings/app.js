@@ -87,9 +87,9 @@ war.battle();
 // Training (aka Pit Fight):
 // ----------------------------------
 
-//var training1 = new PitFight(viking1, viking2);
-//var training2 = new PitFight(viking3, viking4);
+// var training1 = new PitFight(viking1, viking2);
+// var training2 = new PitFight(viking3, viking4);
 
-//training1.train();
+// training1.train();
 //training2.train();
 

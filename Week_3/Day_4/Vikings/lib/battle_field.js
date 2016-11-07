@@ -31,10 +31,47 @@ class BattleField {
 		var sWarrior = this.army2.army[Math.floor(Math.random() * this.army2.army.length)];
 
 
-		console.log(vWarrior);
-		console.log(sWarrior);
-	
-		
+		vWarrior.stats();
+		sWarrior.stats();
+
+
+		var op1Health = vWarrior.health;
+		var op2Health = sWarrior.health;
+
+		var vDead = [];
+		var vLiving = [];
+
+		var sDead = [];
+		var sLiving = [];
+
+		for (; op1Health >= 0 && op2Health >= 0 ; op1Health = vWarrior.health, op2Health = sWarrior.health )  {
+			
+			if (vWarrior.health > 0) {
+				vWarrior.attack(sWarrior);
+			// if warrior is alive, attacks the other	
+			}; 
+
+			if (sWarrior.health > 0) {
+				sWarrior.attack(vWarrior);
+			}; 
+
+		};
+
+
+		if (op1Health > 0) {
+			vLiving.push(vWarrior.name);
+		} else if (op1Health <= 0) {
+			vDead.push(vWarrior.name);
+		}
+
+		if (op2Health > 0) {
+			sLiving.push(sWarrior.name);
+		} else if (op2Health <= 0) {
+			sDead.push(sWarrior.name);
+		}
+
+		console.log(`Alive: `+ vLiving + sLiving);
+		console.log(`Dead: ` + vDead + sDead);
 
 	};
 

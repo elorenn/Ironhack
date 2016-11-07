@@ -16,6 +16,7 @@ class Saxon {
 		console.log(`Name: ${this.name}`);
 		console.log(`Health: ${this.health}`);
 		console.log(`Strength: ${this.strength}`);
+		console.log(`Weapon: ${this.weapon}`);
 		console.log("");
 	}
 

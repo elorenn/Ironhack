@@ -10,7 +10,7 @@ class Viking {
 		this.strength = Math.floor(Math.random() * (20 - 10 +1)) + 10;
 		this.weapon = weapons[Math.floor(Math.random() * weapons.length)];
 
-	} 
+	} 	
 
 
 	stats() {
@@ -24,6 +24,11 @@ class Viking {
 
 	attack(opponent) {
 
+		// var vDead = [];
+		// var vLiving = [];
+
+		// var sDead = [];
+		// var sLiving = [];
 		
 			opponent.health = opponent.health - this.strength;
 			console.log("");
@@ -39,6 +44,14 @@ class Viking {
 
 		}
 
+		// if (this.health > 0) {
+		// 	vLiving.push(this.name);
+		// } else if (this.health <= 0){
+		// 	vDead.push(this.name);
+		// }
+
+		// console.log(`Alive: `+ vLiving + sLiving);
+		// console.log(`Dead: ` + vDead + sDead);
 	}
 }
 

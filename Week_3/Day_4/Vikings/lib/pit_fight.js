@@ -26,22 +26,38 @@ class PitFight {
 		var op1Health = this.opponent1.health;
 		var op2Health = this.opponent2.health;
 
+		var vDead = [];
+		var vLiving = [];
+
+		var sDead = [];
+		var sLiving = [];
+
 		for (; op1Health >= 0 && op2Health >= 0 ; op1Health = this.opponent1.health, op2Health = this.opponent2.health )  {
 			
 			if (this.opponent1.health > 0) {
 				this.opponent1.attack(this.opponent2);
 			} 
 
-			// console.log( op1Health	)
-			// console.log( op2Health	)
-
 			if (this.opponent2.health > 0) {
 				this.opponent2.attack(this.opponent1);
 			} 
 
-			// console.log( op1Health	)
-			// console.log( op2Health	)
 		}
+
+		if (op1Health > 0) {
+			vLiving.push(this.opponent1.name);
+		} else if (op1Health <= 0) {
+			vDead.push(this.opponent1.name);
+		}
+
+		if (op2Health > 0) {
+			sLiving.push(this.opponent2.name);
+		} else if (op2Health <= 0) {
+			sDead.push(this.opponent2.name);
+		}
+
+		console.log(`Winner: `+ vLiving + sLiving);
+		console.log(`Loser: ` + vDead + sDead);
 	}
 }
 
