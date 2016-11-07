@@ -76,6 +76,7 @@ class BattleField {
 		
 		for (; op1Health >= 0 && op2Health >= 0 ; op1Health = vWarrior.health, op2Health = sWarrior.health )  {
 		
+		
 			if (vWarrior.health > 0) {
 				vWarrior.attack(sWarrior);
 			// if warrior is alive, attacks the other	
@@ -83,7 +84,7 @@ class BattleField {
 
 			if (sWarrior.health > 0) {
 				sWarrior.attack(vWarrior);
-			}; 
+			}; 	
 
 		}
 
@@ -104,48 +105,67 @@ class BattleField {
 	};
 
 	war() {
-		this.intro();
 		
 	
 		for (var i = 0; i < this.army1.army.length; i++ ) {
 			this.battle();
 
 		};
-
-
-	
-			if (vLiving.length > 0) {
-				console.log(`Viking Survivors: ` + vLiving.length + ` ` + `(` + vLiving + `)`);
-			} else {
-				console.log(`Viking Survivors: ` + vLiving.length);
-			};
-			if (vDead.length > 0) {
-				console.log(`Viking Casualties: ` + vDead.length + ` ` + `(` + vDead + `)`);
-			} else {
-				console.log(`Viking Casualties: ` + vDead.length);
-			};
-			
-			console.log("");
-
-			console.log(`Saxon Survivors: ` + sLiving.length);
-			console.log(`Saxon Casualties: ` + sDead.length);
-			
-			console.log("");
-
-			if (vLiving.length > sLiving.length) {
-				console.log("Vikings WON!");
-			}else if (sLiving.length > vLiving.length) {
-				console.log("Saxons WON!");
-			} else {
-				console.log("It's a TIE!");
-			};
-
-			console.log("");
 		
 	};
 
+	recap() {
 
+			console.log(`----------------------------------------------`);
+			console.log("");
+
+			if (vLiving.length > 0) {
+				console.log(`Viking Survivors:`); 
+				console.log(`---------------------`);
+				console.log(vLiving.length + ` ` + `(` + vLiving + `)`);
+			} else {
+				console.log(`Viking Survivors: `);
+				console.log(`---------------------`);
+				console.log(vLiving.length);
+			};
+			if (vDead.length > 0) {
+				console.log("");
+				console.log(`Viking Casualties: `);
+				console.log(`---------------------`);
+				console.log(vDead.length + ` ` + `(` + vDead + `)`);
+			} else {
+				console.log(`Viking Casualties: `);
+				console.log(`---------------------`);
+				console.log(vDead.length);
+			};
+			
+			console.log("");
+
+			console.log(`Saxon Survivors: `);
+			console.log(`---------------------`);
+			console.log(sLiving.length);
+			console.log("");
+			console.log(`Saxon Casualties: `);
+			console.log(`---------------------`);
+			console.log(sDead.length);
+			
+			console.log("");
+
+			setTimeout(function () {
+				if (vLiving.length > sLiving.length) {
+					console.log("Vikings WON!");
+				}else if (sLiving.length > vLiving.length) {
+					console.log("Saxons WON!");
+				} else {
+					console.log("It's a TIE!");
+				};
+
+				console.log("");
+			}, 2000);	
+	};
 }
 
+
+// http://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop
 
 module.exports = BattleField; 
