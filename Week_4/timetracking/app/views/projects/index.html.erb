@@ -1,7 +1,7 @@
 <ul>
 	<% @projects.each do |project| %>
 
-		<% if project.description != nil %>
+		<% if project.description != nil && project.description != "" %>
 
 			<li> <%= project.name %> - <%= project.description %> </li>
 
@@ -10,7 +10,7 @@
 			<li> <%= project.name %> </li>
 
 		<% end %>
-		
+
 	<% end %>
 </ul>
 
