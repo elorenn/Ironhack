@@ -1,6 +1,6 @@
+require "artii"
+
 class AsciisController < ApplicationController
-	
-	require "artii"
 
 	def new
 		render 'new' 
