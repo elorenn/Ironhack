@@ -13,4 +13,20 @@ class ProjectsController < ApplicationController
 # we're writing it in anyway for the sake of clarity while learning
 		render :show 
 	end
+
+	def new
+		@my_project = Project.new
+
+		render "new"
+	end
+
+	def create
+		@my_project = Project.new(
+			:name => params[:project][:name],
+			:description => params[:project][:description])
+		@my_project.save
+		# .save will create a new row in your table, hence saving it
+		# redirect_to "/projects/#{@my_project.id}"
+		redirect_to project_path(@my_project)
+	end
 end

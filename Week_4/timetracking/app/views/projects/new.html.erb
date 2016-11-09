@@ -1,0 +1,16 @@
+<hi> Add a Project </hi>
+
+<%= form_for @my_project do |f| %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :description %>
+		<%= f.text_area :description %> 
+	</div>
+	
+	<%= f.button %> 
+
+<% end %>
