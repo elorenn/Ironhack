@@ -2,10 +2,12 @@
 
 <h3> <%= @my_project.name %> </h3>
 
-<p> <%= @my_project.description %> </p>
+<p> <i> <%= @my_project.description %> </i> </p>
 
 <ul>
 	<li> Id: <%= @my_project.id %> </li>
 	<li> Created: <%= @my_project.created_at %> </li>
 	<li> Updated: <%= @my_project.updated_at %> </li>
 </ul>
+
+<%= link_to("See Time Entries", project_time_entries_path(@my_project)) %>
