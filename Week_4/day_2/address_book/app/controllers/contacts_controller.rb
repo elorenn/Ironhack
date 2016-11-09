@@ -6,4 +6,8 @@ class ContactsController < ApplicationController
 	def new 
 		render 'new'
 	end
+
+	def create
+		render(:text => "This route is contacts#create.")
+	end
 end
