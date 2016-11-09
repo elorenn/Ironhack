@@ -1,16 +1,17 @@
+<h2> List of Projects: </h2>
+
 <ul>
 	<% @projects.each do |project| %>
 
 		<% if project.description != nil && project.description != "" %>
 
-			<li> <%= project.name %> - <%= project.description %> </li>
+			<li> <%= link_to project.name, project_path(project) %> - <%= project.description %> </li>
 
 		<% else %>	
 
-			<li> <%= project.name %> </li>
+			<li> <%= link_to project.name, project_path(project) %> </li>
 
 		<% end %>
 
 	<% end %>
 </ul>
-

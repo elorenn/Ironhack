@@ -21,4 +21,12 @@ Rails.application.routes.draw do
 
   get '/projects', to: 'projects#index'  
 
+# the colon (:) before id means that it's a placeholder
+# in the url, :id will be replaced with each corresponding id value
+# if you try to visit the page, you have to plug in a read id value number
+
+#                                              project path
+#                                                   |
+  get '/projects/:id', to: 'projects#show', as: "project" 
+
 end
