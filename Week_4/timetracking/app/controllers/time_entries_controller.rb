@@ -51,6 +51,17 @@ class TimeEntriesController < ApplicationController
 		end
 	end
 
+	def destroy
+		# 1) retreive the project from the db:
+		my_project = Project.find(params[:project_id])
+		# 2) retrieve the time entry from the db:
+		my_entry = my_project.time_entries.find(params[:id])
+		# 3) delete the time entry from the db:
+		my_entry.destroy
+		# 4) redirect away (to the list of time entries)
+		redirect_to project_time_entries_path(my_project)
+	end
+
 	private
 
 	# strong parameters for security purposes: 

@@ -12,6 +12,8 @@
 
 			<%= link_to "Edit", edit_project_time_entry_path(@my_project, entry) %>
 
+			<%= link_to "Delete", project_time_entry_path(@my_project, entry), method: "delete", data: {confirm: "Are you sure?"} %>
+
 		</li>
 	<% end %>
 </ul>
