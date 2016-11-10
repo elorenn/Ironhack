@@ -9,6 +9,9 @@
 			<%= entry.minutes %> m - 
 			<%= entry.date %> - 
 			<i> <%= entry.comments %> </i>
+
+			<%= link_to "Edit", edit_project_time_entry_path(@my_project, entry) %>
+
 		</li>
 	<% end %>
 </ul>

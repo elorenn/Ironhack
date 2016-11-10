@@ -7,6 +7,7 @@ class TimeEntry < ApplicationRecord
 
 	validates :minutes, presence: true
 	validates :minutes, :numericality => { :greater_than_or_equal_to => 0 }
+	validates :minutes, :numericality => { :less_than => 60 }
 
 	validates :date, presence: true
 end
