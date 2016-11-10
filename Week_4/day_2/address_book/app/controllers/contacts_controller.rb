@@ -1,20 +1,23 @@
 class ContactsController < ApplicationController
 	def index
-		@contacts = Contacts.order(created_at: :desc) 
+		@contacts = Contact.order(name:"asc")
+
+		render 'index'
 	end
 
 	def new 
+		@the_contact = Contact.new
 		render 'new'
 	end
 
 	def create
-		contact = Contact.new(
+		@the_contact = Contact.new(
 			:name => params[:contact][:name],
 			:address => params[:contact][:address],
 			:phone_number => params[:contact][:phone_number],
 			:email_address => params[:contact][:email_address])
-		contact.save
+		@the_contact.save
 
-		redirect_to('/contacts')
+			redirect_to('/contacts')
 	end
 end

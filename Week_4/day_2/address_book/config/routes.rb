@@ -3,7 +3,15 @@ Rails.application.routes.draw do
 
   get "/", :to => "site#home"
 
-  get "/new", :to => "contacts#new"
+  get "/contacts", :to => "contacts#index"
+
+  get "/contacts/new", :to => "contacts#new"
   post "/contacts", :to => "contacts#create"
+
+
+
+  # get '/', to: 'contacts#index'
+  # get '/new', to: 'contacts#new'	
+  #post '/contacts', to: 'contacts#create'
 
 end

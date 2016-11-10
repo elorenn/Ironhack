@@ -1,0 +1,29 @@
+<h1> Address Book</h1>
+<h2> Contacts: </h2>
+
+<ul>
+	<% @contacts.each do |one_contact| %>
+	
+		<li>
+			<b> Name: </b> <%= one_contact.name %>
+		</li>
+
+		<li>
+			<b> Address: </b> <%= one_contact.address %>
+		</li>
+
+		<li>
+			<b> Phone: </b> <%= one_contact.phone_number %>
+		</li>
+
+		<li>
+			<b> Email: </b> <%= one_contact.email_address %>
+		</li>
+	<br>
+
+	<% end %> 
+ </i>
+</ul>
+
+<div> <a href="/contacts/new"> Add Contact </a> </div>
+<div> <a href="/"> Home </a> </div>
