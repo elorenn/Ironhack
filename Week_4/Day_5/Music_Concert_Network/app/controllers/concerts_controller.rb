@@ -2,7 +2,6 @@ class ConcertsController < ApplicationController
 
 	def index
 		@concerts = Concert.order(date:"asc")
-		render "index"
 	end
 
 	def new 
@@ -29,7 +28,7 @@ class ConcertsController < ApplicationController
 	end
 
 	def show
-		@concert = Concert.find(params[:concert_id])
+		@concert = Concert.find(params[:id])
 
 		render 'show'
 	end

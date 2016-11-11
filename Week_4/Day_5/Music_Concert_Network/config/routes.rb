@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 	get "/concerts/new", to: "concerts#new"
  	post "/concerts", to: "concerts#create"
 
- 	get '/concerts/:id/show', to: 'concerts#show'
+ 	get '/concerts/:id/show', to: 'concerts#show', as: :concert_show
 
 end

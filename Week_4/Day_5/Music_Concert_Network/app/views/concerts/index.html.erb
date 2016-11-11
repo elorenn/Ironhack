@@ -1,14 +1,15 @@
 <h1> Music Concert Network </h1>
-<h2> Concerts: </h2>
+<h2> All Concerts: </h2>
 
 <ul>
 	<% @concerts.each do |one_concert| %>
 		
 		<li>
-			<b> <%= one_concert.artist %> </b>
+
+		<%= link_to one_concert.artist, concert_show_path(one_concert.id) %>
+
 		</li>
-		<%= link_to "Info", "/concerts/:id/show" %>
-		<BR>
+
 	<% end %> 
 </ul>
 
