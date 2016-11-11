@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 	get "/concerts", to: "concerts#index"
 
 	get "/concerts/new", to: "concerts#new"
- 	#post "/concerts", to: "concerts#create"
+ 	post "/concerts", to: "concerts#create"
 
 end
