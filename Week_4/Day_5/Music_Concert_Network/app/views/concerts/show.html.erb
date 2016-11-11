@@ -1,0 +1,34 @@
+<h1> Music Concert Network </h1>
+<h2> Concerts: </h2>
+
+	<div>
+		<li> <b> <%= one_concert.artist %> </b> </li>
+
+		<div>
+			 Venue: <i> <%= one_concert.venue %> </i>
+		</div>
+
+		<div>	
+			 City: <i> <%= one_concert.city %> </i>
+		</div>
+
+		<div>
+			 Date: <i> <%= one_concert.date %> </i>
+		</div>
+
+		<div>
+			Price: <i> $<%= one_concert.price %> </i>
+		</div>
+
+		<div>
+			 Description: <i> <%= one_concert.description %> </i>
+		</div>
+	</div>	
+
+<nav>
+	<%= link_to "Home", "/" %>
+	-
+	<%= link_to "Concerts", "/concerts" %>
+	-
+	<%= link_to "Add Concert", "/concerts/new" %>
+</nav>	

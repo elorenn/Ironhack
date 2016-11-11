@@ -7,26 +7,7 @@
 		<li>
 			<b> <%= one_concert.artist %> </b>
 		</li>
-
-		<div>
-			 Venue: <i> <%= one_concert.venue %> </i>
-		</div>
-
-		<div>	
-			 City: <i> <%= one_concert.city %> </i>
-		</div>
-
-		<div>
-			 Date: <i> <%= one_concert.date %> </i>
-		</div>
-
-		<div>
-			Price: <i> $<%= one_concert.price %> </i>
-		</div>
-
-		<div>
-			 Description: <i> <%= one_concert.description %> </i>
-		</div>
+		<%= link_to "Info", "/concerts/:id/show" %>
 		<BR>
 	<% end %> 
 </ul>

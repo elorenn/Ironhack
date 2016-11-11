@@ -1,5 +1,13 @@
 <h1> Add a Concert: </h1>
 
+<% if @the_concert.errors.any? %>
+	<ul>
+		<% @the_concert.errors.full_messages.each do |error_msg|%>
+			<li> <%= error_msg %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
 <%= form_for @the_concert do |c| %>
 
 	<div>

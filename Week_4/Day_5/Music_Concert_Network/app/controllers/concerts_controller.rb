@@ -1,7 +1,7 @@
 class ConcertsController < ApplicationController
 
 	def index
-		@concerts = Concert.order(artist:"asc")
+		@concerts = Concert.order(date:"asc")
 		render "index"
 	end
 
@@ -19,13 +19,18 @@ class ConcertsController < ApplicationController
 			:price => params[:concert][:price],
 			:description => params[:concert][:description])
 
-		@the_concert.save
+		if @the_concert.save
 
-		redirect_to('/concerts')
-		#redirect_to concert_path(@the_concert)	
+			redirect_to('/concerts')
+			#redirect_to concert_path(@the_concert)
+		else
+			render 'new'
+		end		
 	end
 
+	def show
+		@concert = Concert.find(params[:concert_id])
+
+		render 'show'
+	end
 end
-
-
-		
