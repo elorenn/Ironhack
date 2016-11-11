@@ -7,10 +7,16 @@
 		<li>
 			<b> Name: </b> <%= one_contact.name %>
 		</li>
+		
+		
+		<%= link_to "Show Info", "/contacts/:id/show" %>
 
 	<% end %> 
  </i>
 </ul>
 
-<div> <a href="/contacts/new"> Add Contact </a> </div>
-<div> <a href="/"> Home </a> </div>
+<nav>
+<%= link_to "Add Contact", "/contacts/new" %>
+- 
+<%= link_to "Home", "/" %>
+</nav>

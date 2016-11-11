@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+
 	def index
 		@contacts = Contact.order(name:"asc")
 
@@ -19,5 +20,11 @@ class ContactsController < ApplicationController
 		@the_contact.save
 
 			redirect_to('/contacts')
+	end
+
+	def show
+		@contact = Contact.find(params[:project_id])
+
+		render 'show'
 	end
 end
