@@ -1,0 +1,38 @@
+<h1> Add a Concert: </h1>
+
+<%= form_for @the_concert do |c| %>
+
+	<div>
+		<%= c.label :artist %>
+		<%= c.text_field :artist %>
+	</div>
+
+	<div>
+		<%= c.label :venue %>
+		<%= c.text_field :venue %> 
+	</div>
+
+	<div>
+		<%= c.label :city %>
+		<%= c.text_field :city %> 
+	</div>
+
+	<div>
+		<%= c.label :date %>
+		<%= c.datetime_field :date %> 
+	</div>
+
+	<div>
+		<%= c.label :price %>
+		<%= c.number_field :price %> 
+	</div>
+
+	<div>
+		<%= c.label :description %>
+		<%= c.text_area :description %> 
+	</div>
+
+	<%= c.button %> 
+
+<% end %>
+

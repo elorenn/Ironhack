@@ -5,4 +5,11 @@ class ConcertsController < ApplicationController
 		render "index"
 	end
 
+	def new 
+		@the_concert = Concert.new
+		render 'new'
+	end
+
 end
+
+
