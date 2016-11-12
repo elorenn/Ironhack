@@ -1,4 +1,4 @@
-<h1> Music Concert Network </h1>
+
 <h2> Add a Concert: </h2>
 
 <% if @the_concert.errors.any? %>
@@ -8,6 +8,8 @@
 		<% end %>
 	</ul>
 <% end %>
+
+
 
 <%= form_for @the_concert do |c| %>
 
@@ -46,8 +48,4 @@
 <% end %>
 
 
-<nav>
-	<%= link_to "Home", "/" %>
-	-
-	<%= link_to "Concerts", "/concerts" %>
-</nav>	
+

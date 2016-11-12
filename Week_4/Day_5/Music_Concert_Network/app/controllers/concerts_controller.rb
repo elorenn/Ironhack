@@ -21,7 +21,6 @@ class ConcertsController < ApplicationController
 		if @the_concert.save
 
 			redirect_to('/concerts')
-			#redirect_to concert_path(@the_concert)
 		else
 			render 'new'
 		end		
