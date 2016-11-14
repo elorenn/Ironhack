@@ -3,17 +3,25 @@
 <h2> Concerts Today: </h2>
 
 <ul>
-	<% @concerts.each do |one_concert| %>
+	<% @todays_concerts.each do |one_concert| %>
 		
-			<li>
-				
+			<li>	
 			<%= link_to one_concert.artist, concert_show_path(one_concert.id) %>
 			</li>
 
-			<BR>
-
-		
+			<BR>	
 	<% end %> 
 </ul>
 
+<h2> Concerts Later this Month: </h2>
 
+<ul>
+	<% @later_concerts.each do |one_concert| %>
+		
+			<li>	
+			<%= link_to one_concert.artist, concert_show_path(one_concert.id) %>
+			</li>
+
+			<BR>	
+	<% end %> 
+</ul>

@@ -7,7 +7,7 @@ class CreateConcerts < ActiveRecord::Migration[5.0]
       t.datetime :date
       t.integer :price
       t.text :description
-      t.integer :concert_id
+      
 
       t.timestamps
     end
