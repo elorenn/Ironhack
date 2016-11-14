@@ -46,6 +46,14 @@ $(document).ready(function () {
 			`);
 	});
 
+
+	// $('p').remove();
+	// 	$('.do-stuff').remove();
+
+	$('.js-falafel').on('click', falafelMessage);
+
+	$('.do-stuff').on('click', doStuffMessage);
+
 	$('#cookies').on("click", cookieMessage);
 
   $(".js-button-thing").on("click", function () {
@@ -68,6 +76,28 @@ $(document).ready(function () {
   });
 
 });
+
+
+function falafelMessage () {
+		var content = `
+		<i> Falafel </i>`;
+
+		$("js-jq-paragraph").html(content);
+
+		//$('.container').empty();
+		$('p').remove();
+	}
+
+
+function doStuffMessage () {
+		var content = `
+		<i> Falafel </i>`;
+
+		$("js-jq-paragraph").html(content);
+
+		$('.container').empty();
+		
+	}
 
 
 function cookieMessage () {
