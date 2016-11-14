@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20161114014239) do
     t.datetime "date"
     t.integer  "price"
     t.text     "description"
-    t.integer  "concert_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

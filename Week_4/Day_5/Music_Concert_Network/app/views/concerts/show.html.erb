@@ -1,27 +1,21 @@
 
-<h2> Concerts: </h2>
+<h2> <i> Presenting </i> <%= @concert.artist %> <i> at <%= @concert.venue %> </i> </h2>
 
 	<div>
-		<li> <b> <%= @concert.artist %> </b> </li>
 
-		<div>
-			 Venue: <i> <%= @concert.venue %> </i>
-		</div>
+	 Join us for a night of <%= @concert.description %>
+		
+	</div>
 
-		<div>	
-			 City: <i> <%= @concert.city %> </i>
-		</div>
+	<div>
+		<p>	
+			 <%= @concert.city %> on <%= @concert.date %> 
+		</p>
 
-		<div>
-			 Date: <i> <%= @concert.date %> </i>
-		</div>
+		<p>
+			<i> tickets: $<%= @concert.price %> </i>
+		</p>
+	</div>
+		
 
-		<div>
-			Price: <i> $<%= @concert.price %> </i>
-		</div>
-
-		<div>
-			 Description: <i> <%= @concert.description %> </i>
-		</div>
-	</div>	
-
+<%= link_to "see comments", concert_comments_path %>

@@ -1,0 +1,35 @@
+<h2> <i> Presenting </i> <%= @the_concert.artist %> <i> at <%= @the_concert.venue %> </i> </h2>
+
+	<div>
+
+	 Join us for a night of <%= @the_concert.description %>
+		
+	</div>
+
+	<div>
+		<p>	
+			 <%= @the_concert.city %> on <%= @the_concert.date %> 
+		</p>
+
+		<p>
+			<i> tickets: $<%= @the_concert.price %> </i>
+		</p>
+	</div>
+
+
+<ul>
+	<% @the_comments.each do |one_comment| %>
+		
+		<li>
+			<%= one_comment.comment %> - 
+			<%= one_comment.user %>, 
+			<%= one_comment.date %>
+		</li>
+		
+	<% end %> 
+</ul>
+
+
+
+
+
