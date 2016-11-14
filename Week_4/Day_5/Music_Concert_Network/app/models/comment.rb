@@ -1,3 +1,6 @@
 class Comment < ApplicationRecord
-	belongs_to :project 
+	validates :user, presence: true
+	validates :comment, presence: true
+
+	belongs_to :concert 
 end

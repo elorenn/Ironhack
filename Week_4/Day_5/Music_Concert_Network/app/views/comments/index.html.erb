@@ -29,6 +29,8 @@
 	<% end %> 
 </ul>
 
+<%= link_to "hide comments", concert_path(@the_concert.id) %>
+<%= link_to "leave comment", new_concert_comment_path(@the_concert.id) %>
 
 
 

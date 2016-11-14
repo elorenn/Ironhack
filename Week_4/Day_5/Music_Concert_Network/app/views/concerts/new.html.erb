@@ -11,39 +11,39 @@
 
 
 
-<%= form_for @the_concert do |c| %>
+<%= form_for @the_concert do |f| %>
 
 	<div>
-		<%= c.label :artist %>
-		<%= c.text_field :artist %>
+		<%= f.label :artist %>
+		<%= f.text_field :artist %>
 	</div>
 
 	<div>
-		<%= c.label :venue %>
-		<%= c.text_field :venue %> 
+		<%= f.label :venue %>
+		<%= f.text_field :venue %> 
 	</div>
 
 	<div>
-		<%= c.label :city %>
-		<%= c.text_field :city %> 
+		<%= f.label :city %>
+		<%= f.text_field :city %> 
 	</div>
 
 	<div>
-		<%= c.label :date %>
-		<%= c.datetime_field :date %> 
+		<%= f.label :date %>
+		<%= f.datetime_field :date %> 
 	</div>
 
 	<div>
-		<%= c.label :price %>
-		<%= c.number_field :price %> 
+		<%= f.label :price %>
+		<%= f.number_field :price %> 
 	</div>
 
 	<div>
-		<%= c.label :description %>
-		<%= c.text_area :description %> 
+		<%= f.label :description %>
+		<%= f.text_area :description %> 
 	</div>
 
-	<%= c.button %> 
+	<%= f.button %> 
 
 <% end %>
 

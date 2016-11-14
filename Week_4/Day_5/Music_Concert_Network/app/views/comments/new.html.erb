@@ -1,0 +1,46 @@
+
+<h2> <i> Presenting </i> <%= @the_concert.artist %> <i> at <%= @the_concert.venue %> </i> </h2>
+
+	<div>
+
+	 Join us for a night of <%= @the_concert.description %>
+		
+	</div>
+
+	<div>
+		<p>	
+			 <%= @the_concert.city %> on <%= @the_concert.date %> 
+		</p>
+
+		<p>
+			<i> tickets: $<%= @the_concert.price %> </i>
+		</p>
+	</div>
+
+
+<% if @the_comment.errors.any? %>
+	<ul>
+		<% @the_comment.errors.full_messages.each do |error_msg|%>
+			<li> <%= error_msg %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
+
+<%= form_for [@the_concert, @the_comment] do |f| %>
+
+	<div>
+		<%= f.label :user %>
+		<%= f.text_field :user %>
+	</div>
+
+	<div>
+		<%= f.label :comment %>
+		<%= f.text_area :comment %> 
+	</div>
+
+	<%= f.button %> 
+
+<% end %>
+
+<%= link_to "see comments", concert_comments_path(@the_concert.id) %>
