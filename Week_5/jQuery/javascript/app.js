@@ -56,8 +56,12 @@ $(document).ready(function () {
 
 	$('#cookies').on("click", cookieMessage);
 
+	$(".js-change-unicorn").on("click", changeUnicorn);
+
+	//$(".js-button-color").on("click", changeButtonColor);
+
   $(".js-button-thing").on("click", function () {
-    $("body").before(`<img src="images/unicorn3.gif">`);
+    $(".container").before(`<img src="images/unicorn3.gif">`);
   });
 
 
@@ -75,7 +79,50 @@ $(document).ready(function () {
     }
   });
 
+	$(".js-button-color").on("click", changeButtonColor);
+
+
+  $('#js-slide').on('click', function(){
+	  $('.container').slideToggle(2000);
+  });
+
 });
+
+
+
+function changeButtonColor () {
+	$("button").addClass("btn");
+
+	if ( $("button").hasClass("btn-success") ) {
+		$("button").removeClass("btn-success");
+		$("button").addClass("btn-info");
+	}
+
+	else if ( $("button").hasClass("btn-info") ) {
+		$("button").removeClass("btn-info");
+		$("button").addClass("btn-warning");
+	}
+
+	else if ( $("button").hasClass("btn-warning") ) {
+		$("button").removeClass("btn-warning");
+	}
+
+	else {
+		$("button").addClass("btn-success");
+	}
+
+}
+
+
+var unicornCount = 2;
+function changeUnicorn () {
+	unicornCount += 1;
+
+	if (unicornCount >7) {
+		unicornCount = 1
+	}
+	$(".js-unicorn-image").attr("src", `images/unicorn${unicornCount}.gif`);
+}
 
 
 function falafelMessage () {
@@ -113,7 +160,7 @@ function cookieMessage () {
 				<li> Cookies don't lie to you. </li>
 			</ul>
 		</div> ` ;
-	$("body").append(cookieContent);	 
+	$(".container").append(cookieContent);	 
 }
 
 
