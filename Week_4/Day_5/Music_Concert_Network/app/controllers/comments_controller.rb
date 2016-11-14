@@ -18,11 +18,11 @@ class CommentsController < ApplicationController
 		@the_comment = @the_concert.comments.new(
 			:user => params[:comment][:user],
 			:comment => params[:comment][:comment],
-			:date => params[:comment][:date])
+			:date => params[:comment][:date] ||= Date.today.to_time)
 
 		if @the_comment.save
 
-			redirect_to concert_path(@the_concert)
+			redirect_to concert_comments_path(@the_concert)
 		else
 			render 'new'
 		end
