@@ -86,6 +86,10 @@ $(document).ready(function () {
 	  $('.container').slideToggle(2000);
   });
 
+  $('#js-opacity').on('click', function(){
+	  $('.js-poof').fadeToggle(2000);
+  });
+
 });
 
 
