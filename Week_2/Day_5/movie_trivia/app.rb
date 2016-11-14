@@ -11,11 +11,6 @@ get "/" do
 	erb :home	
 end
 
-# get "/search_results" do
-	
-# 	erb(:results) 
-# end
-
 get "/searching" do
 	the_search = Imdb::Search.new(params[:select_word])
 
@@ -46,7 +41,7 @@ end
 
 
 # get "/tryagain" do
- 
+
 # 	erb(:results)
 # end
 

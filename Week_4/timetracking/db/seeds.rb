@@ -9,7 +9,7 @@
 
 projectA = Project.create!(name: "Ironhack")
 projectB = Project.create!(name: "Edwardian Chairs", description: "Refurbing those two old chairs.")
-projectC = Project.create!(name: "Plastic Pinks Album", description: "Artwork for new record")
+projectC = Project.create!(name: "Clear Plastic Masks", description: "Artwork for new record")
 projectD = Project.create!(name: "RTW", description: "plans for round the world trip")
 projectE = Project.create!(name: "Underwater Globe", description: "Blueprints for spherical underwater home")
 projectF = Project.create!(name: "Straddle Bus", description: "plans for new transportation method")
