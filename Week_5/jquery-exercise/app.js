@@ -14,10 +14,15 @@ $(document).ready(function () {
 
 
 
-var phrase = phrases[Math.floor(Math.random()*phrases.length)];
 
 
-	$('.js-phrase').append(phrase);
+
+	$('#rand-phrase').on('click', function(){
+
+		var phrase = phrases[Math.floor(Math.random()*phrases.length)];
+
+	   	$('.js-phrase').append(phrase);
+  	});
 
 
 });
