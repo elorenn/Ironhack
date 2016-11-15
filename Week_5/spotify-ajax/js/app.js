@@ -48,10 +48,28 @@ function handleSuccess (response) {
 	responseObject.forEach(function (searchResult) {
 		var artistInfo = `
 			<li> 
-				<h3> Artist: ${searchResult.name} </h3>
+				<h3> ${searchResult.name} </h3>
 			</li>`;
 
+		console.log(searchResult.images);
+
+
+		var imagesArray = searchResult.images;
+
+		imagesArray.forEach(function (object) {
+			imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`; 
+
+			console.log(object.url);
+			console.log(imageUrl);
+		});
+
+
+
+		
+
 		$(".js-artist-info").append(artistInfo);
+		$(".js-artist-info").append(imageUrl);
+
 	});
 
 }
