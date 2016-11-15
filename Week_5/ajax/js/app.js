@@ -1,4 +1,4 @@
-console.log("APP JS READY");
+console.log("APP IS READY");
 
 $(document).ready(function() {
 
