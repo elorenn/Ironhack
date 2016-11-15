@@ -93,12 +93,12 @@ function changeSauce () {
 
 	if ($('.btn-sauce').hasClass('active')) {
 
-  			ingredientCount += 3; 
+  			ingredientCount -= 3; 
 
   			$('strong').text(`$${ingredientCount}`)
   		}	
   		else {
-  			ingredientCount -= 3; 
+  			ingredientCount += 3; 
 
   			$('strong').text(`$${ingredientCount}`);
   		}
