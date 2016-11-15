@@ -22,6 +22,8 @@ $(document).ready(function () {
   			$('strong').text(`$${ingredientCount}`);
   		}	
 
+  		$('.add-pep').toggle();
+
 
   		// if ($('.btn-pepperonni').hasClass('active')) {
   		// 	$('.btn-pepperonni').removeClass('active');
@@ -50,7 +52,10 @@ $(document).ready(function () {
   			$('strong').text(`$${ingredientCount}`);
   		}	
 
+  		$('.add-mush').toggle();
+
 	});
+
 
 	$('.btn-green-peppers').on('click', function(){
   		$('#js-green-peppers').toggle();
@@ -67,6 +72,8 @@ $(document).ready(function () {
 
   			$('strong').text(`$${ingredientCount}`);
   		}
+
+  		$('.add-gree').toggle();
 	});
 
 
@@ -83,25 +90,44 @@ function changeSauce () {
 
 	$('.btn-sauce').toggleClass('active');
 
+	// if(('.btn-sauce').hasClass('active')) {
+	// 	$(".add-wht").show();
+	// }
+	// else {
+	// 	$(".add-wht").hide();
+	// }
+
 	if ( $(".sauce").hasClass("sauce-white") ) {
 		$(".sauce").removeClass("sauce-white");
+		
 	}
 
 	else {
 		$(".sauce").addClass("sauce-white");
+		
 	}
+
+	var white = '<li class="add-wht">$3 white sauce</li>'
 
 	if ($('.btn-sauce').hasClass('active')) {
 
   			ingredientCount += 3; 
 
-  			$('strong').text(`$${ingredientCount}`)
+  			$('strong').text(`$${ingredientCount}`);
+
+  			if (! $('list-price').hasClass('add-wht')) {
+  				$('.list-price').append(white);
+  			}
   		}	
   		else {
   			ingredientCount -= 3; 
 
   			$('strong').text(`$${ingredientCount}`);
-  		}
+
+  			$('ul').remove('add-wht');
+  		}	
+
+  		
 }
 
 
@@ -129,4 +155,6 @@ function changeCrust () {
 
   			$('strong').text(`$${ingredientCount}`);
   		}
+
+  		$('.add-glut').toggle();
 }
