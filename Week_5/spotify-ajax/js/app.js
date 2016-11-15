@@ -56,19 +56,28 @@ function handleSuccess (response) {
 
 		var imagesArray = searchResult.images;
 
+		var urlArray = [];
+
 		imagesArray.forEach(function (object) {
-			imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`; 
+			imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`;
+			
+
+			urlArray.push(imageUrl);
 
 			console.log(object.url);
 			console.log(imageUrl);
 		});
 
+		console.log(urlArray);
 
+		urlArray.forEach(function (url) {
+			$(".js-artist-info").append(url);
+		});
 
 		
 
 		$(".js-artist-info").append(artistInfo);
-		$(".js-artist-info").append(imageUrl);
+		//$(".js-artist-info").append(imageUrl);
 
 	});
 
