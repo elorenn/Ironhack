@@ -1,6 +1,6 @@
 // Write your Pizza Builder JavaScript in this file.
 
-var ingredientCount = 21
+var ingredientCount = 18
 
 $(document).ready(function () {
 
@@ -93,12 +93,12 @@ function changeSauce () {
 
 	if ($('.btn-sauce').hasClass('active')) {
 
-  			ingredientCount -= 3; 
+  			ingredientCount += 3; 
 
   			$('strong').text(`$${ingredientCount}`)
   		}	
   		else {
-  			ingredientCount += 3; 
+  			ingredientCount -= 3; 
 
   			$('strong').text(`$${ingredientCount}`);
   		}
