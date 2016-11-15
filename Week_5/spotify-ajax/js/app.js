@@ -38,5 +38,24 @@ function handleError (error) {
 function handleSuccess (response) {
 	console.log("search Artist success!");
 	console.log(response);
+
+	console.log(response.artists);
+
+	console.log(response.artists.items);
+
+	var responseObject = response.artists.items;
+
+	responseObject.forEach(function (searchResult) {
+		var artistInfo = `
+			<li> 
+				<h3> Artist: ${searchResult.name} </h3>
+			</li>`;
+
+		$(".js-artist-info").append(artistInfo);
+	});
+
 }
+
+
+
 
