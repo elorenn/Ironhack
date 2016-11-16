@@ -5,8 +5,32 @@ $(document).ready(function (argument) {
 	console.log("The page has finished loading.");
 	promptForLocation();
 	beginWatch();
-	
+	$(".js-where-am-i").on("click", promptForMap);
+
 });
+
+
+function promptForMap () {
+	if ("geolocation" in navigator) {
+		console.log("prompt for map");
+
+		var optionsThing = {
+				enableHighAccuracy: true,
+				timeout: 5000
+			};	
+
+		navigator.geolocation.getCurrentPosition(showMap, showError);
+	}
+	else {
+		console.log("error");
+	}
+}
+
+function showMap () {
+	console.log("show map");
+}
+
+
 
 
 function beginWatch () {
