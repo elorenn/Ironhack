@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 	$(".js-artist-form").on("submit", searchArtist);
 
-
 });
 
 
@@ -81,8 +80,7 @@ function handleSuccess (response) {
 		
 
 		imagesArray.forEach(function (object) {
-			imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`;
-			
+			imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`;	
 		});
 		
 
