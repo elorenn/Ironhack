@@ -4,7 +4,6 @@ $(document).ready(function (argument) {
 	
 	console.log("The page has finished loading.");
 	promptForLocation();
-	beginWatch();
 	$(".js-where-am-i").on("click", promptForMap);
 
 });
@@ -28,35 +27,6 @@ function promptForMap () {
 
 function showMap () {
 	console.log("show map");
-}
-
-
-
-
-function beginWatch () {
-	if ("geolocation" in navigator) {
-		navigator.geolocation.watchPosition(watchSuccess, watchError);
-	}
-}
-
-function watchSuccess (locInfo) {
-	console.log("Watch location:");
-	console.log(locInfo);
-
-	var watchItem = `
-		<li>
-			Latitude: ${locInfo.coords.latitude}
-			<br>
-			Longitude: ${locInfo.coords.longitude}
-		</li>`;
-
-	$(".js-watch-list").append(watchItem);
-}
-
-
-function watchError (errInfo) {
-	console.log("Watch error:");
-	console.log(errInfo);
 }
 
 

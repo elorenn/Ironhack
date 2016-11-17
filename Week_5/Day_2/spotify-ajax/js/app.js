@@ -13,16 +13,30 @@ function searchArtist (e) {
 
 	var artistInput = $(".js-artist-search").val();
 
-	if (artistInput === "") {
-		artistInput = "Oasis";
+	if (artistInput !== "") {
+		
+		$.ajax({
+			type: "GET",
+			url: `https://api.spotify.com/v1/search?type=artist&query=${artistInput}`,
+			success: handleSuccess,	
+			error: handleError,
+		});
 	}
+	else {
+		var errorHtml = `
+			<div class="alert alert-warning" role="alert">
+				Search left blank. Please type in an artist to search for.
+				<button class="js-try-again"> Try Again </button>
+			</div>`;
+
+		$("body").prepend(errorHtml);
+
+		$(".js-try-again").on("click", function () {
+		location.reload();
+	});	
 	
-	$.ajax({
-		type: "GET",
-		url: `https://api.spotify.com/v1/search?type=artist&query=${artistInput}`,
-		success: handleSuccess,	
-		error: handleError,
-	});
+		console.log("artist input left blank");
+	}
 
 	console.log(artistInput);
 }
@@ -46,38 +60,13 @@ function handleSuccess (response) {
 
 	responseObject.forEach(function (searchResult) {
 		var artistInfo = `
-			<li> 
+			
 				<h3> ${searchResult.name} </h3>
-			</li>`;
+			`;
 
 		console.log(searchResult.images);
 
-
 		var imagesArray = searchResult.images;
-
-	//-----------------------------------------------------------------
-		// // so if you want to display all 3 images under each artist, uncomment these lines:
-			
-			// var urlArray = [];
-
-			// imagesArray.forEach(function (object) {
-			// 	imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`;
-				
-
-			// 	urlArray.push(imageUrl);
-
-			// 	console.log(object.url);
-			// 	console.log(imageUrl);
-			// });
-
-			// console.log(urlArray);
-
-			// urlArray.forEach(function (url) {
-			// 	$(".js-artist-info").append(url);
-			// });
-
-	//-----------------------------------------------------------------
-		
 
 		imagesArray.forEach(function (object) {
 			imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`;	
