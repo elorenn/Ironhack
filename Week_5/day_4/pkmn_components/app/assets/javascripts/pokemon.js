@@ -31,16 +31,66 @@ PokemonApp.showPokemonModal = function (apiResult) {
 	console.log("Pokemon API success!");
 	console.log(apiResult);
 
-
+// ===================== Find Types ==============================
+	
 	var types = apiResult.types
 	var allTypes = []
+
 	types.forEach(function(type) {
 		
 		allTypes.push(type.name);
 			
 	});
 
+// ===================== Descriptions ============================
 
+	var descArray = apiResult.descriptions
+	console.log(descArray);
+	var allGens = []; // will end up being sorted
+	var allGens2 = []; // will not be sorted 
+
+	for (i = 0; i < descArray.length; i++) {
+		string = apiResult.descriptions[i].name;
+		// console.log(string); // = beedrill_gen_6
+
+		lastChar = string.charAt(string.length - 1); 
+		// console.log(lastChar); // = "6"
+
+		lastCharNum = parseFloat(lastChar);	
+		// console.log(lastCharNum); // = 6 
+
+		//allGens.push(lastCharNum);
+		allGens.push(lastChar);
+		allGens2.push(lastChar);
+	}
+
+	//console.log(allGens2);
+	var sorted = allGens.sort();
+	//console.log(sorted);
+	var latestGen = sorted[sorted.length - 1] ;
+	console.log(latestGen); // = 6
+
+
+	//allGens.find(latestGen).findiNDEX()
+	var indexOfGen = allGens2.indexOf(latestGen);
+	console.log(indexOfGen);
+
+
+	var indexOfDesc = descArray[indexOfGen];
+	console.log(indexOfDesc);
+	var descUri = indexOfDesc.resource_uri
+	console.log(descUri);
+
+
+		$.ajax({
+			type: "GET", 
+			url: descUri,
+			success: PokemonApp.showPokemonDescription,
+			error: PokemonApp.handleError
+		});
+	
+
+// ===================== Add Text ================================
 
 	$(".js-pkmn-name").text(apiResult.name);
 	$(".js-pkmn-number").text(`#${apiResult.pkdx_id}`);
@@ -59,8 +109,7 @@ PokemonApp.showPokemonModal = function (apiResult) {
 	$(".js-pokemon-modal").modal("show");
 
 
-
-
+// ===================== Console Logs ============================
 
 	console.log(`name: ${apiResult.name}`);
 	// console.log(`id: ${apiResult.pkdx_id}`);
@@ -78,49 +127,7 @@ PokemonApp.showPokemonModal = function (apiResult) {
 	
 	//console.log(apiResult.sprites);
 
-
-
-
-
-	// var descArray = apiResult.descriptions
-	// var allGens = []
-	// descArray.forEach(function(object) {
-	// 	string = apiResult.descriptions[].name;
-
-
-
-	// 	allGens.push(????);
-	// });
-
-
-
-	var descArray = apiResult.descriptions
-	console.log(descArray);
-	var allGens = []
-
-	for (i = 0; i < descArray.length; i++) {
-		string = apiResult.descriptions[i].name;
-		console.log(string); // = beedrill_gen_6
-
-		lastChar = string.charAt(string.length - 1); 
-		console.log(lastChar); // = "6"
-
-		lastCharNum = parseFloat(lastChar);	
-		console.log(lastCharNum); // = 6 
-
-		allGens.push(lastCharNum);
-	}
-
-	console.log(allGens);
-
-
-
-	
-};
-
-
-
-
+}; // end of showPokemonModal function
 
 
 
@@ -132,6 +139,11 @@ PokemonApp.handleError = function (errorThang) {
 };
 
 
+PokemonApp.showPokemonDescription = function (apiResult) {
+		
+	console.log(apiResult);
+	$(".js-pkmn-description").text(apiResult.description)
+};
 
 
 
