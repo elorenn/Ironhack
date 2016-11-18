@@ -88,7 +88,6 @@ PokemonApp.showPokemonModal = function (apiResult) {
 			success: PokemonApp.showPokemonDescription,
 			error: PokemonApp.handleError
 		});
-	
 
 // ===================== Add Text ================================
 
@@ -107,7 +106,6 @@ PokemonApp.showPokemonModal = function (apiResult) {
 
 
 	$(".js-pokemon-modal").modal("show");
-
 
 // ===================== Console Logs ============================
 
@@ -128,8 +126,6 @@ PokemonApp.showPokemonModal = function (apiResult) {
 	//console.log(apiResult.sprites);
 
 }; // end of showPokemonModal function
-
-
 
 
 

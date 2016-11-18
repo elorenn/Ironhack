@@ -38,8 +38,9 @@ function searchArtist (e) {
 		console.log("artist input left blank");
 	}
 
-	console.log(artistInput);
-}
+	//console.log(artistInput);
+
+} // => end of searchArtist
 
 
 function handleError (error) {
@@ -49,37 +50,58 @@ function handleError (error) {
 
 
 function handleSuccess (response) {
-	console.log("search Artist success!");
-	console.log(response);
-
-	console.log(response.artists);
-
-	console.log(response.artists.items);
+	console.log("search Artist success!");	
+	// console.log(response);
+	// console.log(response.artists);
+	// console.log(response.artists.items);
 
 	var responseObject = response.artists.items;
 
 	responseObject.forEach(function (searchResult) {
 		var artistInfo = `
-			
-				<h3> ${searchResult.name} </h3>
+				
+				<div class="js-each-thing">
+				<label for="js-the-artist-search"> ${searchResult.name} </label>
+				</div>
 			`;
 
-		console.log(searchResult.images);
+		//console.log(searchResult.images);
 
 		var imagesArray = searchResult.images;
 
-		imagesArray.forEach(function (object) {
-			imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`;	
-		});
+// ========================== Show Images =============================		
+	var urlArray = [];
+
+	imagesArray.forEach(function (object) {
+		//imageUrl = `<img src="${object.url}" style="width:25%; height:25%;">`;
 		
 
-		$(".js-artist-info").append(artistInfo);
-		$(".js-artist-info").append(imageUrl);
+		imageUrl = `<input type="image" id= "js-the-artist-search" style="width:25%; height:25%;" src="${object.url}">`
 
+		urlArray.push(imageUrl);
+	
+
+		//console.log(object.url);
+		//console.log(imageUrl);
 	});
 
-}
+	//console.log(urlArray);
+
+	$(".js-artist-info").append(artistInfo);
+	$(".js-artist-info").append(urlArray[0]); // bcs before it was showing a pixelated image
+	
+
+	// console.log(artistInfo);
+	// console.log(urlArray[0]);
+
+	$(".js-artist-info").on("click", searchAlbum);
+
+	}); // => end of responseObject.forEach
+
+} // => end of handleSuccess
 
 
-
+function searchAlbum() {
+	console.log("clicked on picture to get albums");
+};
 
