@@ -101,7 +101,8 @@ function handleSuccess (response) {
 } // => end of handleSuccess
 
 
-function searchAlbum() {
+function searchAlbum(event) {
+	event.preventDefault();
 	console.log("clicked on picture to get albums");
 };
 
