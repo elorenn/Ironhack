@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Spotify Player </title>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/player.js"></script>
+</head>
+<body>
+	<header class="navbar-header"> 
+	<center>
+		<h2> Spotify Widget </h2> 
+		
+		<form class="js-song-search-form">  
+	 		<input class="js-song-search" type="search" placeholder="Search for a song...">
+	 		<button class="btn"><strong>Search</strong></button>
+	 	</form>
+
+	</center>	
+	</header>
+	
+	<div class="widget">
+		<div class="header">
+			<!-- Try adding/removing these classes: -->
+			<!-- disabled -->
+			<!-- playing -->
+			<div class="btn-play disabled"></div>
+
+			<div class="metadata js-metadata">
+			  <p class="title js-title">Tilted</p>
+			  <p class="author js-author">Christine and the Queens</p>
+
+			  <div class="seekbar">
+			    <progress value="0" max="30"></progress>
+			  </div>
+			</div>
+		</div>
+
+		<div class="cover">
+			<img class="js-image" src="https://i.scdn.co/image/f7d9bf1aaa5d0d76da8dc98fbc1a1b85f5cec334">
+		</div>
+
+		<audio class="js-audio" src="https://p.scdn.co/mp3-preview/523d810d6fc006104329266bcd64693b87d998bd"></audio>
+	</div>
+	<!-- <footer class="footer"> With love, Lore </footer> -->
+</body>
+</html>
