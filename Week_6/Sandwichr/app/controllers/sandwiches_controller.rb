@@ -1,5 +1,6 @@
 class SandwichesController < ApplicationController
 protect_from_forgery with: :null_session
+
 	def index
 		sandwiches = Sandwich.all
 		render json: sandwiches
@@ -12,7 +13,9 @@ protect_from_forgery with: :null_session
 
 	def show
 		sandwich = Sandwich.find(params[:id])
-		render json: sandwich
+		#list_of_ingredients = sandwich.ingredients
+		# render json: sandwich
+		render json: sandwich.to_json({:include => :ingredients})
 	end
 
 	def update
