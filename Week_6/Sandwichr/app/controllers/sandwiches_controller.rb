@@ -13,8 +13,8 @@ protect_from_forgery with: :null_session
 
 	def show
 		sandwich = Sandwich.find(params[:id])
-		#list_of_ingredients = sandwich.ingredients
-		# render json: sandwich
+		list_of_ingredients = sandwich.ingredients
+		#render json: sandwich
 		render json: sandwich.to_json({:include => :ingredients})
 	end
 
@@ -28,6 +28,17 @@ protect_from_forgery with: :null_session
 		sandwich = Sandwich.find(params[:id])
 		sandwich.destroy
 		render json: sandwich
+	end
+
+	def add_ingredient
+		sandwich_id = params[:id]
+		ingredient_id = params[:ingredient_id]
+
+		sandwich = Sandwich.find_by(id: sandwich_id)
+		ingredient = Ingredient.find_by(id: ingredient_id)
+
+		sandwich.ingredients.push(ingredient)
+		render json: sandwich.to_json({:include => :ingredients})
 	end
 
 	private

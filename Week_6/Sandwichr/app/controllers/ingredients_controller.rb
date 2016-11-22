@@ -47,8 +47,10 @@ class IngredientsController < ApplicationController
 	private
 
 	def ingredient_params
-	  params.require(:ingredient)
-	    .permit(:name, :calories)
+		# Ingredient.new(
+		#    name: params[:ingredient][:name],
+		#    calories: params[ingredient][:calories])
+	  params.require(:ingredient).permit(:name, :calories)
 	end
 
 end
