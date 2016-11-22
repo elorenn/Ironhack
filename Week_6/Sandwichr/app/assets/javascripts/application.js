@@ -53,9 +53,12 @@ function getIngredient (resp) {
 	var ingredients = resp.ingredients;
 	var blah = ingredients[ingredients.length - 1];
 	var lastIngredient = blah.name
-	console.log(lastIngredient); // => ingredient name
-	 
+	console.log(lastIngredient); // => ingredient name 
+	console.log(resp.total_calories); 
+	
 	$('.js-current-ingredient-list').append(`<li> ${lastIngredient} </li>`);
+	$('.js-total-cal').text(resp.total_calories);
+	
 	
 }
 
