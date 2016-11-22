@@ -37,7 +37,12 @@ protect_from_forgery with: :null_session
 		sandwich = Sandwich.find_by(id: sandwich_id)
 		ingredient = Ingredient.find_by(id: ingredient_id)
 
+		sandwich.total_calories = sandwich.total_calories + ingredient.calories
+
 		sandwich.ingredients.push(ingredient)
+
+		sandwich.save
+
 		render json: sandwich.to_json({:include => :ingredients})
 	end
 
