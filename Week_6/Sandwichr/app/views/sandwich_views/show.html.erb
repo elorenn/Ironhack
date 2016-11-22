@@ -1,16 +1,27 @@
-<h1> <%= @sandwich.name %> </h1>
+<h1 data-id="<%= @sandwich.id %>"> <%= @sandwich.name %> </h1>
 
 
 	
 <h2> Bread: <%= @sandwich.bread_type %> </h2>
 <h2> Calories: <%= @sandwich.total_calories %> </h2>
-<h2> Ingredients: </h2> 
-	<ul>
+<h2> Current Ingredients: </h2> 
+	<ul class="js-current-ingredient-list">
 		<% @sandwich.ingredients.each do |ingredient| %>
 		<li> 
-			<%= ingredient.name %> -------- cal: <%= ingredient.calories %>		
+			<%= ingredient.name %>
 		</li>
 		<% end %>
 	</ul>
-	
-	
+
+<h2> Posssible Ingredients: </h2> 	
+	<ul>
+		<% @possibleIngredients.each do |ingredient| %>
+		<p> 
+		<button class="js-add-ingredient" data-id="<%= ingredient.id %>">
+			<%= ingredient.name %> -- cal: <%= ingredient.calories %>	
+		</button>		
+		</p>
+		<% end %>
+	</ul>
+		
+

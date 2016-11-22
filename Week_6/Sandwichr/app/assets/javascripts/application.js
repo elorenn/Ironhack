@@ -14,3 +14,50 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+console.log("CONSOLE LOG");
+
+$(document).ready(function () {
+
+	$('.js-add-ingredient').on('click', addIngredient);
+	
+});
+
+function addIngredient (e) {
+	console.log("clicked on button");
+
+	var button = e.target
+	var ingredientId = $(this).attr("data-id")
+	var sandwichId = $("h1").data("id")
+	console.log(button);
+	console.log(ingredientId);
+
+	$.ajax({
+    type: "POST",
+    url:`http://localhost:3000/api/sandwiches/${sandwichId}/ingredients/add`,
+    data: {ingredient_id: ingredientId},
+    success: getIngredient,  
+    error: handleError
+  });
+}
+
+function handleError (error) {
+	console.log("ERROR. Could not find ingredient.");
+}
+
+function getIngredient (resp) {
+	console.log(resp);
+	console.log(resp.name); // => sandwich name
+	console.log(resp.ingredients);
+	var ingredients = resp.ingredients;
+	var blah = ingredients[ingredients.length - 1];
+	var lastIngredient = blah.name
+	console.log(lastIngredient); // => ingredient name
+	 
+	$('.js-current-ingredient-list').append(`<li> ${lastIngredient} </li>`);
+	
+}
+
+
+
