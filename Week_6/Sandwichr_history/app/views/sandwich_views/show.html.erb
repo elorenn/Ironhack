@@ -3,7 +3,7 @@
 
 	
 <h2> Bread: <%= @sandwich.bread_type %> </h2>
-<h2 class="js-total-cal"> Calories: <%= @sandwich.total_calories %> </h2>
+<h2> Calories: <cal class="js-total-cal"> <%= @sandwich.total_calories %> </cal> </h2>
 <h2> Current Ingredients: </h2> 
 	<ul class="js-current-ingredient-list">
 		<% @sandwich.ingredients.each do |ingredient| %>
@@ -24,4 +24,11 @@
 		<% end %>
 	</ul>
 		
+
+<nav>	
+	<%= link_to "Sandwich List", sandwiches_path %>
+	
+	<%= link_to "Home", root_path %>
+</nav>
+
 
