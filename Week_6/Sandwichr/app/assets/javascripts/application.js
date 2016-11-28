@@ -57,7 +57,7 @@ function getIngredient (resp) {
 	console.log(resp.total_calories); 
 	
 	$('.js-current-ingredient-list').append(`<li> ${lastIngredient} </li>`);
-	$('.js-total-cal').text(resp.total_calories);
+	$('.js-total-cal').html(resp.total_calories);
 	
 	
 }

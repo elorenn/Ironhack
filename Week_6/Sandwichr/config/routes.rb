@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :sandwiches, only: [:index, :show], controller: "sandwich_views"
+  root 'site#home'	
+  resources :sandwiches, only: [:index, :show]
   
   scope "/api" do
-    resources :sandwiches
-    resources :ingredients
+    resources :sandwiches, except: [:new, :edit]
+    resources :ingredients, except: [:new, :edit]
     post "/sandwiches/:id/ingredients/add" => "sandwiches#add_ingredient"
   end
 

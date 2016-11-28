@@ -15,6 +15,7 @@ protect_from_forgery with: :null_session
 		sandwich = Sandwich.find(params[:id])
 		list_of_ingredients = sandwich.ingredients
 		#render json: sandwich
+		#render json: sandwich.to_json(include: [:ingredients])
 		render json: sandwich.to_json({:include => :ingredients})
 	end
 
@@ -38,10 +39,9 @@ protect_from_forgery with: :null_session
 		ingredient = Ingredient.find_by(id: ingredient_id)
 
 		sandwich.total_calories = sandwich.total_calories + ingredient.calories
-
 		sandwich.ingredients.push(ingredient)
-
 		sandwich.save
+		#sandwich.update_calories # => method defined in sandwich.rb model
 
 		render json: sandwich.to_json({:include => :ingredients})
 	end
