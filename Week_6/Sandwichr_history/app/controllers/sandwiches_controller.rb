@@ -1,6 +1,8 @@
 class SandwichesController < ApplicationController
 protect_from_forgery with: :null_session
 
+# controlls the api
+
 	def index
 		sandwiches = Sandwich.all
 		render json: sandwiches
