@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barbecues</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application', defer: true %>
+  <%= csrf_meta_tags %>
+</head>
+<body data-hook="controller-<%= controller_name %> action-<%= action_name %>">
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+</body>
+</html>
