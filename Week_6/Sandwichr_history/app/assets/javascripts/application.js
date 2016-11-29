@@ -19,7 +19,7 @@
 console.log("CONSOLE LOG");
 
 $(document).ready(function () {
-
+	
 	$('.js-add-ingredient').on('click', addIngredient);
 	
 });
@@ -46,18 +46,18 @@ function handleError (error) {
 	console.log("ERROR. Could not find ingredient.");
 }
 
-function getIngredient (resp) {
-	console.log(resp);
-	console.log(resp.name); // => sandwich name
-	console.log(resp.ingredients);
-	var ingredients = resp.ingredients;
+function getIngredient (response) {
+	console.log(response);
+	console.log(response.name); // => sandwich name
+	console.log(response.ingredients);
+	var ingredients = response.ingredients;
 	var blah = ingredients[ingredients.length - 1];
 	var lastIngredient = blah.name
 	console.log(lastIngredient); // => ingredient name 
-	console.log(resp.total_calories); 
+	console.log(response.total_calories); 
 	
 	$('.js-current-ingredient-list').append(`<li> ${lastIngredient} </li>`);
-	$('.js-total-cal').html(resp.total_calories);
+	$('.js-total-cal').html(response.total_calories);
 	
 	
 }

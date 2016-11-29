@@ -1,10 +1,10 @@
-<h1 data-id="<%= @sandwich.id %>"> <%= @sandwich.name %> </h1>
+<h2 data-id="<%= @sandwich.id %>"> <%= @sandwich.name %> </h2>
 
 
 	
-<h2> Bread: <%= @sandwich.bread_type %> </h2>
-<h2> Calories: <cal class="js-total-cal"> <%= @sandwich.total_calories %> </cal> </h2>
-<h2> Current Ingredients: </h2> 
+<h3> Bread: <%= @sandwich.bread_type %> </h3>
+<h3> Calories: <cal class="js-total-cal"> <%= @sandwich.total_calories %> </cal> </h3>
+<h3> Current Ingredients: </h3> 
 	<ul class="js-current-ingredient-list">
 		<% @sandwich.ingredients.each do |ingredient| %>
 		<li> 
@@ -13,17 +13,18 @@
 		<% end %>
 	</ul>
 
-<h2> Posssible Ingredients: </h2> 	
-	<ul>
-		<% @possibleIngredients.each do |ingredient| %>
-		<p> 
-		<button class="js-add-ingredient" data-id="<%= ingredient.id %>">
-			<%= ingredient.name %> -- cal: <%= ingredient.calories %>	
-		</button>		
-		</p>
-		<% end %>
-	</ul>
-		
+<section class="add-more-ingredients-wrapper">
+	<h3> Add More Ingredients: </h3> 	
+		<ul>
+			<% @possibleIngredients.each do |ingredient| %>
+			 
+			<button class="js-add-ingredient" data-id="<%= ingredient.id %>">
+				<%= ingredient.name %> -- cal: <%= ingredient.calories %>	
+			</button>		
+			
+			<% end %>
+		</ul>
+</section>		
 
 <nav>	
 	<%= link_to "Sandwich List", sandwiches_path %>

@@ -10,9 +10,21 @@
 
   <body>
 
-	   <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <h1> Sandwichr </h1>
+
+      <% if notice %>
+        <p class="notice"> <%= notice %> </p>
+      <% end %>
+
+       <% if alert %>
+        <p class="alert"> <%= alert %> </p>
+      <% end %>
 
     <%= yield %>
+
+    <footer> 
+      <p> Made with &hearts; and &#9749; at Ironhack. </p>
+    </footer>
+
   </body>
 </html>
